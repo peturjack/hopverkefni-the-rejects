@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import styled from 'styled-components'
 // useState and setFunction. When we create a variable using useState, it returns an array with two elements: the current state value and a function to update that state. That function is called setFunction.
 
 // Define a type `Props` for the properties that the `Button` component can accept.

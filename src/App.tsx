@@ -3,6 +3,7 @@ import Logo from './assets/doctor-svgrepo-com.svg'
 import clockLogo from './assets/clock-circle-svgrepo-com.svg'
 import './App.css'
 import Button from './components/Button';
+import Navbar from './components/Navbar';
 
 
 function App() {

@@ -1,8 +1,8 @@
 import styled, { createGlobalStyle, css } from 'styled-components'
-import fontsCss from './fonts.module.css'
+
 
 export const GlobalStyles = createGlobalStyle`
- ${fontsCss} // this works as a normal styled css
+  // this works as a normal styled css
 
 /* Box sizing rules */
 *,
@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 html {
-  font-size: 100%;
+  font-size: 62.5%;
 }
 
 body {
@@ -21,10 +21,8 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  font-family: ${({ theme }) => theme.fonts.anekMalayalam}, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  color: ${({ theme }) => theme.colors.text};
-  background-color: ${({ theme }) => theme.colors.background};
   line-height: 1;
 }
 h1,

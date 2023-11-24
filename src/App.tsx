@@ -1,18 +1,17 @@
 import React from 'react';
-import { ButtonPrimary, AppLoginButton } from './components/Button';
-import { GlobalStyles } from './styles/Global';
-import Navbar from './components/navbar/Navbar';
-import { Burger, Menu } from './components/navbar'
+import { Burger, Menu, Navbar, Logo } from './components/navbar'
+import "./index.css"
 
-const App: React.FC = () => {
+function App () {
   const[open, setOpen] = React.useState(false)
 
   return (
     <>
-  
-      <Burger open={open} setOpen={setOpen} />
-      <Menu open={open} />
-  
+      <Navbar>
+        <Logo />
+        <Burger open={open} setOpen={setOpen} />
+        <Menu open={open} />
+      </Navbar>
   
     </>
   )

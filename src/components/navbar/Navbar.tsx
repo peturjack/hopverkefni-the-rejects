@@ -1,19 +1,18 @@
-import React from 'react'
-import styled from "styled-components";
+import { StyledNav} from './Navbar.styled'
+import React from 'react';
 
-const Navbar = styled.div`
-    position: absolute;
-    top: 5%;
-    right: 0;
-    width: 3rem;
-    height: 3rem;
-    margin: 20px;
-    color: rgb(134, 35, 98);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    border: none;
-    padding: 0;
-    `
+interface Props {
+    children: React.ReactNode;
+}
+
+const Navbar: React.FC<Props> = ({ children }) => {
+    return (
+        <StyledNav>
+            {children}
+        </StyledNav>
+    
+    )     
+};
 
 export default Navbar
+ 

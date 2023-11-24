@@ -5,20 +5,21 @@ interface Props {
 }
 
 export const StyledMenu = styled.nav<Props>`
-  display: none;
+  // This is the menu in larger screens
+  display: flex;
+  justify-content: space-evenly;
 
   a {
-    padding: 18px 10px;
-    color: #000000;
+    color: #293437;
     text-decoration: none;
     font-size: 20px;
-    font-weight: 200;
+    font-weight: 400;   //Font weight 400 er Regular
     line-height: 24px;
   }
-
+// This is the menu in smaller screens
   @media (max-width: 768px) {
     flex-flow: column wrap;
-    background-color: #E5E5E5;
+    background-color: #9FC7D1;
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
     top: 0;
@@ -27,10 +28,8 @@ export const StyledMenu = styled.nav<Props>`
     list-style: none;
     display: flex;
     width: 40%;
-    padding-top: 3.5rem;
     transition: transform 0.4s ease-in-out;
     align-items: center;
     border-radius: 0.8rem;
   }
-
 `

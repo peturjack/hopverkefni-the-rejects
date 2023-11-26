@@ -12,7 +12,6 @@ function App () {
         <Burger open={open} setOpen={setOpen} />
         <Menu open={open} />
       </Navbar>
-  
     </>
   )
 }

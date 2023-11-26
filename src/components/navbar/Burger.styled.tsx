@@ -7,7 +7,6 @@ interface Props {
 export const StyledBurger = styled.button<Props>`
   width: 1.5rem;
   height: 1.5rem;
-  position: fixed;
   top: 15px;
   right: 20px;
   z-index: 20;

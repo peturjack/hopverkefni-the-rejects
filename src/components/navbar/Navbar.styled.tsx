@@ -7,6 +7,7 @@ export const StyledNav = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     border: none;
     padding: 0;
     `

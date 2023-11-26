@@ -15,6 +15,7 @@ export const StyledMenu = styled.nav<Props>`
     font-size: 20px;
     font-weight: 400;   //Font weight 400 er Regular
     line-height: 24px;
+    margin: 0 10px; // this adds a horizontal margin
   }
 // This is the menu in smaller screens
   @media (max-width: 768px) {

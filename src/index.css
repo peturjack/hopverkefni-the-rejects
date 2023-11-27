@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-
-  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-  font-family: 'Roboto', sans-serif;
-}
-
-button {
-  cursor: pointer;
-}
-=======
 
   @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
@@ -52,4 +34,3 @@ h1 {
   font-size: 2.4rem;
   font-weight: 500;
 }
->>>>>>> a370aad5102d670af569b077be314009c035eb75

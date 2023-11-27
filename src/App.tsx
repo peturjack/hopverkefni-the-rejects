@@ -1,7 +1,7 @@
 import React from 'react';
 import { ButtonPrimary, AppLoginButton } from './components/Button';
 import {useState} from "react";
-import ChooseClinic from './components/choseClinic/ChooseClinic';
+import ChooseClinic from './components/chooseClinic/ChooseClinic';
 import { Burger, Menu, Navbar, Logo } from './components/navbar'
 import "./index.css"
 import { ContentWrapper } from './components/ContentWrapper';

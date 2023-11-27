@@ -6,10 +6,7 @@ interface Props {
 
 export const StyledBurger = styled.button<Props>`
   width: 1.5rem;
-  height: 1.5rem;
-  top: 15px;
-  right: 20px;
-  z-index: 20;
+  height: 1.5rem; 
   display: none;
   border: none;
   cursor: pointer;
@@ -23,6 +20,7 @@ export const StyledBurger = styled.button<Props>`
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;
+    z-index: 20; 
   }
 
   div {

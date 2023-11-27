@@ -21,6 +21,7 @@ export const StyledMenu = styled.nav<Props>`
   @media (max-width: 768px) {
     flex-flow: column wrap;
     background-color: #9FC7D1;
+    z-index: 10; 
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
     top: 0;

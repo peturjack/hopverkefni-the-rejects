@@ -9,8 +9,28 @@
   text-decoration: none;
   list-style: none;
   font-family: 'Roboto', sans-serif;
+  
+}
+
+html {
+  font-size: 62.5%;
+  
+}
+
+body {
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(182,230,233,1) 100%);
 }
 
 button {
   cursor: pointer;
+}
+
+p{
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 500;
 }

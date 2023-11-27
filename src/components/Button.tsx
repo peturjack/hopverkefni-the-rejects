@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
  const ButtonPrimary = styled.button `
-    width: 7rem;
-    height: 3rem;
+    font-size: 1.6rem;
+    padding: 1rem;
     border: none;
     background-color: #276989;
     color: white;
@@ -17,7 +17,7 @@ import styled from "styled-components";
 
 const AppLoginButton = styled(ButtonPrimary)`
     color: black;
-    width: 10rem;
+    
     background-color: beige;
     &&:hover {
         background-color: #dadaba;

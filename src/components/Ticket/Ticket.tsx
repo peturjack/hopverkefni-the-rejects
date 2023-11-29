@@ -1,5 +1,6 @@
-import React from 'react'
+import {useState}  from 'react';
 import { StyledTicket } from './Ticket.styled'
+import LateButton from './LateButton';
 
 const Ticket = () => {
     
@@ -10,9 +11,22 @@ const Ticket = () => {
             <strong>You will receive an SMS reminder 30 minutes before your appointment.<br />And another reminder 15 minutes before.</strong><br /><br />  
             Make sure to be on time!</p></div>
             <StyledTicket>
-                <h1>294</h1>
+                <div>
+                    <p>Your ticket number:</p>
+                    <h1>294</h1>
+                </div>
+                <div>
+                    <p>Last number called:</p>
+                    <h2>286</h2>
+                </div>
+                <div>
+                    <p>Estimated wait time:</p>
+                    <h2>38:16</h2>
+                </div>
             </StyledTicket>
-            <div><p>Are you running late?</p></div>
+            <br/>
+            <LateButton />
+            
         </>
     )
 }

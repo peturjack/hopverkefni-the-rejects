@@ -1,9 +1,9 @@
-import React, { Dispatch, SetStateAction }  from 'react';
+import React from 'react';
 import { StyledMenu } from './Menu.styled';
 
 interface Props {
   open: boolean,
-  setNav: Dispatch<SetStateAction<string>>, 
+  setNav: (navItem: string) => void,
 }
 
 const Menu: React.FC<Props> = ({ open, setNav }) => {
@@ -16,6 +16,3 @@ const Menu: React.FC<Props> = ({ open, setNav }) => {
 };
 
 export default Menu;
-
-// I have to make the about and contact as buttons. 
-// and then use <button onClick={() => setNav("about")}>About</button> in app.tsx (or where) for the moving between pages

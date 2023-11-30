@@ -3,6 +3,7 @@ import {useState} from "react";
 import { Burger, Menu, Navbar, Logo,} from './components/navbar'
 import "./index.css"
 import { ContentWrapper } from './components/ContentWrapper';
+import NoIdPage from './components/signIn/NoId';
 import Ticket from './components/Ticket/Ticket';
 import useTicket from './components/Ticket/useTicket';
 import About from './components/About';
@@ -41,8 +42,8 @@ function App () {
     "about": <About />,
     "contact": <Contact />,
     "sign-in": <IdPage setNav={setNav}  />,
-    // "late": 
-    // in here we'll add all our pages as they are created.
+    "sign-in-two": <NoIdPage setNav = {setNav} />,
+    
 
   }     
 

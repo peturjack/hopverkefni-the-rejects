@@ -26,7 +26,7 @@ function App () {
   const[nav, setNav] = useState("sign-in")  //The string inside the useState() should be our frontpage. It's inital page for the website
 
   const navChange = (actionNav: string) => {
-    setNav(actionNav);  // this is the 
+    setNav(actionNav);  // 
     setOpen(false);  // this closes the menu when sth is clicked in menu
   };
   
@@ -40,7 +40,7 @@ function App () {
               setNav={setNav} />,
     "about": <About />,
     "contact": <Contact />,
-    "sign-in": <IdPage />,
+    "sign-in": <IdPage setNav={setNav}  />,
     // "late": 
     // in here we'll add all our pages as they are created.
 

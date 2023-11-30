@@ -1,3 +1,4 @@
+import React, { useState} from 'react';
 import styled from 'styled-components';
 import CheckBox from "../CheckBox";
 import { ButtonPrimary } from "../Button";
@@ -39,7 +40,12 @@ const StylePhoneNr = styled.div `
      padding-left: 3px;
 `
 
-const SignInPhone= function (){ 
+interface Props {
+    setNav: (nav: string) => void;  // this is added here for navigation
+}
+
+const SignInPhone: React.FC<Props> = function ({setNav}){ 
+
     return ( 
     <Container> 
        <Title>Sign In</Title>
@@ -48,7 +54,7 @@ const SignInPhone= function (){
         <PhoneBar placeholder='000-000' type='Text'></PhoneBar>
         <CheckBox text={"Remember me"}/>
       </div>
-      <ButtonPrimary>Authenticate</ButtonPrimary>
+      <ButtonPrimary onClick={() => setNav("clinic")}>Authenticate</ButtonPrimary>
     </Container>
     )
 }

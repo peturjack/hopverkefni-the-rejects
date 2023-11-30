@@ -1,6 +1,8 @@
-import styled from "styled-components"
-import MoreOptions from "./MoreOptions"
-import SignInPhone from "./SignInPhone"
+import React from 'react';
+import styled from "styled-components";
+import MoreOptions from "./MoreOptions";
+import SignInPhone from "./SignInPhone";
+
 
 
 const StyledIdPage = styled.div`
@@ -11,11 +13,16 @@ const StyledIdPage = styled.div`
     padding-top: 15rem;
 
 `
-const IdPage = () => {
+
+interface Props {
+    setNav: (nav: string) => void;  // this is added here for navigation
+}
+
+const IdPage: React.FC<Props> = ({setNav}) => {
 
     return (
     <StyledIdPage>
-        <SignInPhone/>
+        <SignInPhone setNav={setNav}/>
         <MoreOptions/>
     </StyledIdPage>
     );

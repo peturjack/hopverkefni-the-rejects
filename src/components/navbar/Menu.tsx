@@ -3,16 +3,16 @@ import { StyledMenu } from './Menu.styled';
 
 interface Props {
   open: boolean,
+  setNav: (navItem: string) => void,
 }
 
-const Menu: React.FC<Props> = ({ open }) => {
+const Menu: React.FC<Props> = ({ open, setNav }) => {
   return (
     <StyledMenu open = {open} >
-      <a href="/">About Us</a>
-      <a href="/">Contact</a>
+      <button onClick={() => setNav("about")}>About Us</button>   
+      <button onClick={() => setNav("contact")}>Contact</button>
     </StyledMenu>
   );
 };
 
-export default Menu;
-
+export default Menu

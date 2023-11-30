@@ -27,7 +27,7 @@ const InsideText = styled.input `
         font-size: 2rem;
     }
 `
-const SignInPhone= function (){ 
+const MoreOptions= function (){ 
     return ( 
     <Container> 
        <Title>More Options</Title>
@@ -41,4 +41,4 @@ const SignInPhone= function (){
 
     )
 }
-export default SignInPhone
+export default MoreOptions

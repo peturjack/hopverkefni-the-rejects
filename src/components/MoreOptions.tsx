@@ -17,9 +17,12 @@ const Container = styled.div `
 `
 const InsideText = styled.input `
     border-radius: 5px;
+    border:none;
+    margin-top: 2rem;
+ 
     background: #FFF;
     width: 170px;
-    height:50px;
+    height:40px;
     margin-top:10px;
     padding-top:7px;
     padding-left: 10px;
@@ -27,7 +30,7 @@ const InsideText = styled.input `
         font-size: 2rem;
     }
 `
-const SignInPhone= function (){ 
+const MoreOptions= function (){ 
     return ( 
     <Container> 
        <Title>More Options</Title>
@@ -41,4 +44,4 @@ const SignInPhone= function (){
 
     )
 }
-export default SignInPhone
+export default MoreOptions

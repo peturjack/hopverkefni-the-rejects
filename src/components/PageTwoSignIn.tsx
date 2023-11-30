@@ -15,16 +15,18 @@ const Container = styled.div `
     justify-content: Center;
     flex-direction: column;
     align-items: Center;
-    gap: 2rem;
+    gap: 0rem;
+  
 `
 const PhoneBar = styled.input `
     border-radius: 5px;
     background: #FFF;
     width: 283px;
-    height: 60px;
+    height: 55px;
     flex-shrink: 0;
     margin-top:10px;
     padding-top:10px;
+    border: none;
     padding-left: 2px;
     &&::placeholder {
         font-size: 2.6rem;
@@ -37,18 +39,31 @@ const StylePhoneNr = styled.div `
      font-weight: 400;
      line-height: normal;
      padding-left: 3px;
-`
-
-const SignInPhone= function (){ 
+     border:none;
+    
+ `
+const AuthenticateButton = styled(ButtonPrimary)`
+    margin-top: 3rem;
+    margin-bottom: 10rem;
+    padding: 20px 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+    `
+const PageTwoSignIn= function (){ 
     return ( <Container> 
        <Title>Sign In</Title>
        <div>
+        <StylePhoneNr>Name</StylePhoneNr>
+        <PhoneBar placeholder='Name' type='Text'></PhoneBar>
+        </div>
+      <div>
         <StylePhoneNr>Phone Number</StylePhoneNr>
-        <PhoneBar placeholder='000-000' type='Text'></PhoneBar>
-        <CheckBox text={"Remeber me"}/>
+        <PhoneBar placeholder='Phone Number' type='Text'></PhoneBar>
+        <CheckBox text={"Remember me"}/>
       </div>
-      <ButtonPrimary placeholder='Authenticate' type='Text'></ButtonPrimary>
+      <AuthenticateButton>Authenticate</AuthenticateButton>
       </Container>
       )
 }
-export default SignInPhone
+export default PageTwoSignIn

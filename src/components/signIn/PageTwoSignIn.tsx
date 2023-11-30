@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import CheckBox from "./CheckBox";
-import {ButtonPrimary} from "./Button";
+import CheckBox from "../CheckBox";
+import {ButtonPrimary} from "../Button";
 
 const Title = styled.h2`
    font-family: Roboto;
@@ -50,7 +50,13 @@ const AuthenticateButton = styled(ButtonPrimary)`
     padding-bottom: 20px;
     
     `
-const PageTwoSignIn= function (){ 
+
+interface Props {
+        setNav: (nav: string) => void;  // this is added here for navigation
+    }
+    
+
+const PageTwoSignIn: React.FC<Props> = function ({setNav}){ 
     return ( <Container> 
        <Title>Sign In</Title>
        <div>
@@ -62,7 +68,7 @@ const PageTwoSignIn= function (){
         <PhoneBar placeholder='Phone Number' type='Text'></PhoneBar>
         <CheckBox text={"Remember me"}/>
       </div>
-      <AuthenticateButton>Authenticate</AuthenticateButton>
+      <AuthenticateButton onClick={() => setNav("clinic")} >Authenticate</AuthenticateButton>
       </Container>
       )
 }

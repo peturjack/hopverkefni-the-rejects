@@ -1,6 +1,7 @@
+import React, { useState} from 'react';
 import styled from 'styled-components';
-import CheckBox from "./CheckBox";
-import {ButtonPrimary} from "./Button";
+import CheckBox from "../CheckBox";
+import { ButtonPrimary } from "../Button";
 
 const Title = styled.h2`
    font-family: Roboto;
@@ -39,16 +40,22 @@ const StylePhoneNr = styled.div `
      padding-left: 3px;
 `
 
-const SignInPhone= function (){ 
-    return ( <Container> 
+interface Props {
+    setNav: (nav: string) => void;  // this is added here for navigation
+}
+
+const SignInPhone: React.FC<Props> = function ({setNav}){ 
+
+    return ( 
+    <Container> 
        <Title>Sign In</Title>
        <div>
         <StylePhoneNr>Phone Number</StylePhoneNr>
         <PhoneBar placeholder='000-000' type='Text'></PhoneBar>
-        <CheckBox text={"Remeber me"}/>
+        <CheckBox text={"Remember me"}/>
       </div>
-      <ButtonPrimary placeholder='Authenticate' type='Text'></ButtonPrimary>
-      </Container>
-      )
+      <ButtonPrimary onClick={() => setNav("clinic")}>Authenticate</ButtonPrimary>
+    </Container>
+    )
 }
 export default SignInPhone

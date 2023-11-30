@@ -1,15 +1,16 @@
 import React from 'react';
 import { ButtonPrimary, AppLoginButton } from './components/Button';
 import {useState} from "react";
-import ChooseClinic from './components/chooseClinic/ChooseClinic';
-import { Burger, Menu, Navbar, Logo } from './components/navbar'
+
+import { Burger, Menu, Navbar, Logo,} from './components/navbar'
 import "./index.css"
+import SignInPhone from './components/SignInPhone';
 import { ContentWrapper } from './components/ContentWrapper';
-
-function App () {
-  const[open, setOpen] = React.useState(false)
-
-  return (
+import MoreOptions from './components/MoreOptions';
+ function App() {
+const [open, setOpen]= React.useState (false)
+  
+return (
     <>
     <ContentWrapper>
       <Navbar>
@@ -17,9 +18,13 @@ function App () {
         <Burger open={open} setOpen={setOpen} />
         <Menu open={open} />
       </Navbar>
-      <ChooseClinic />
+      <div style={{display:"flex", paddingTop: "15rem", flexDirection:"column", justifyContent:"space-between", height:"70vh"}}>
+      <SignInPhone/>
+      <MoreOptions/>
+      </div>
     </ContentWrapper>  
     </>
   )
 }
 export default App;
+//

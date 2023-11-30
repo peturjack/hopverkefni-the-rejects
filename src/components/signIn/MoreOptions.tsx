@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { AppLoginButton } from '../Button';
 const Title = styled.p`
     color: #000;
     font-family: Roboto;
@@ -19,7 +20,6 @@ const InsideText = styled.input `
     border-radius: 5px;
     border:none;
     margin-top: 2rem;
- 
     background: #FFF;
     width: 170px;
     height:40px;
@@ -38,7 +38,7 @@ const MoreOptions= function (){
         <InsideText placeholder='App Login'></InsideText>
       </div>
       <div>
-      <InsideText placeholder='No Electronic ID'></InsideText>
+      <InsideText onClick={() => setNav("clinic")} placeholder='No Electronic ID'></InsideText>
       </div>
     </Container>
 

@@ -1,8 +1,15 @@
-import {useState}  from 'react';
 import { StyledTicket } from './Ticket.styled'
 import LateButton from './LateButton';
 
-const Ticket = () => {
+interface Props {
+    ticketNumber: number;    // Defining my props 
+    lastNumber: number;
+    waitTime: string;
+    requestNewTicket: () => void;
+    setNav: (nav: string) => void;  // this is added here for navigation on requestNewTicket click
+  }
+
+const Ticket: React.FC<Props> = ({ticketNumber, lastNumber, waitTime, requestNewTicket, setNav}) => {
     
     return (
         <>
@@ -13,19 +20,19 @@ const Ticket = () => {
             <StyledTicket>
                 <div>
                     <p>Your ticket number:</p>
-                    <h1>294</h1>
+                    <h1>{ticketNumber}</h1>
                 </div>
                 <div>
                     <p>Last number called:</p>
-                    <h2>286</h2>
+                    <h2>{lastNumber}</h2>
                 </div>
                 <div>
                     <p>Estimated wait time:</p>
-                    <h2>38:16</h2>
+                    <h2>{waitTime}</h2>
                 </div>
             </StyledTicket>
             <br/>
-            <LateButton />
+            <LateButton requestNewTicket={requestNewTicket} setNav={setNav} />
             
         </>
     )

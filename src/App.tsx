@@ -1,14 +1,15 @@
 import React from 'react';
 import {useState} from "react";
-import ChooseClinic from './components/choseClinic/ChooseClinic';
-import { Burger, Menu, Navbar, Logo } from './components/navbar'
+import { Burger, Menu, Navbar, Logo,} from './components/navbar'
 import "./index.css"
 import { ContentWrapper } from './components/ContentWrapper';
 import Ticket from './components/Ticket/Ticket';
-import TextWrapper from './components/TextWrapper';
+import useTicket from './components/Ticket/useTicket';
 import About from './components/About';
 import Contact from './components/Contact';
-import useTicket from './components/Ticket/UseTicket';
+import ChooseClinic from './components/chooseClinic/ChooseClinic';
+import TextWrapper from './components/TextWrapper';
+import IdPage from './components/signIn/Id';
 
 
 function App () {
@@ -22,7 +23,7 @@ function App () {
                 //   setTicketNumber(prevNumber => prevNumber + 7);  // Increment the ticket number as is
                 // };
 
-  const[nav, setNav] = useState("ticket")  //The string inside the useState() should be our frontpage. It's inital page for the website
+  const[nav, setNav] = useState("sign-in")  //The string inside the useState() should be our frontpage. It's inital page for the website
 
   const navChange = (actionNav: string) => {
     setNav(actionNav);  // this is the 
@@ -39,6 +40,7 @@ function App () {
               setNav={setNav} />,
     "about": <About />,
     "contact": <Contact />,
+    "sign-in": <IdPage />,
     // "late": 
     // in here we'll add all our pages as they are created.
 
@@ -59,4 +61,5 @@ function App () {
     </>
   )
 }
-export default App;
+
+export default App

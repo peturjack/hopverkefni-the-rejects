@@ -15,4 +15,4 @@ const Menu: React.FC<Props> = ({ open, setNav }) => {
   );
 };
 
-export default Menu;
+export default Menu

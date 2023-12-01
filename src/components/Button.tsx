@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
  const ButtonPrimary = styled.button `
     font-size: 2rem;
@@ -6,10 +7,10 @@ import styled from "styled-components";
     border: none;
     background-color: #276989;
     color: white;
-    border-radius: 0.3rem;
+    border-radius: 1rem;
     transition: .3s ease-in-out;
     &&:hover {
-        background-color: #003C59
+        background-color: #003C59;
     }
 `
 

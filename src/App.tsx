@@ -2,6 +2,11 @@ import React, {useState} from 'react';
 import { Burger, Menu, Navbar, Logo,} from './components/navbar'
 import "./index.css"
 import { ContentWrapper } from './components/ContentWrapper';
+import Frontpage from './components/frontpage';
+import cloud from "./assets/cloudmain.svg"
+import { CloudContainer,Cloud } from './components/frontpage/cloud';
+import Payment from './components/paymentSite/payment';
+
 import NoIdPage from './components/signIn/NoId';
 import Ticket from './components/Ticket/Ticket';
 import useTicket from './components/Ticket/useTicket';
@@ -16,7 +21,7 @@ function App () {
 
   const { ticketNumber, lastNumber, waitTime, requestNewTicket } = useTicket();
 
-  const[nav, setNav] = useState("clinic");  //The string inside the useState() should be our frontpage. It's inital page for the website
+  const[nav, setNav] = useState("frontpage");  //The string inside the useState() should be our frontpage. It's inital page for the website
 
   const [clinic, setClinic] = useState("");
 
@@ -38,12 +43,17 @@ function App () {
     "contact": <Contact />,
     "sign-in": <IdPage setNav={setNav}  />,
     "sign-in-two": <NoIdPage setNav = {setNav} />,
-    // "payment": <ChoosePay />
+    "frontpage": <Frontpage/>,
+    "payment": <Payment />
   }     
 
   return (
     <>
+    <CloudContainer>
+      <Cloud initial={{x:-100 }} animate={{x:0}} transition={{repeat: Infinity, repeatType: "mirror", duration: 20, ease: [0.67, 0.67, 0.83, 0.67] }} src={cloud} />
+      </CloudContainer>
     <ContentWrapper>
+      
       <Navbar>
         <Logo setNav={navChange} />
         <Burger open={open} setOpen={setOpen} />

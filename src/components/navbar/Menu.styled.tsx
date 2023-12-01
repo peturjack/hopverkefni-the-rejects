@@ -18,7 +18,6 @@ export const StyledMenu = styled.nav<Props>`
     margin: 0 10px; // this adds a horizontal margin
     background: transparent;
     border: none;
-    
   }
 
   a {
@@ -29,20 +28,22 @@ export const StyledMenu = styled.nav<Props>`
     line-height: 24px;
     margin: 0 10px; // this adds a horizontal margin
   }
+
 // This is the menu in smaller screens
   @media (max-width: 768px) {
     flex-flow: column wrap;
-    background-color: #9FC7D1;
+    background-color: rgb(182,230,233);
     z-index: 10; 
     position: fixed;
-    transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
-    top: 0;
-    right: 0;
+    transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(120%)'};
+    top: 3%;   // Position of menu 
+    right: 7%;
     height: 16rem;
     list-style: none;
     display: flex;
-    width: 40%;
-    transition: transform 0.4s ease-in-out;
+    width: 37%;
+    height: 15%;
+    transition: transform 0.5s ease-in-out ;
     align-items: center;
     border-radius: 0.8rem;
   }

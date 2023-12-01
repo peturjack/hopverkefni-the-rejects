@@ -14,7 +14,7 @@ const Ticket: React.FC<Props> = ({ticketNumber, lastNumber, waitTime, requestNew
     
     return (
         <>
-            <h1>{clinic} </h1>  {/*This needs to be fetching the right choice from ChooseClinic Page*/}
+            <div><h1>{clinic}</h1></div> {/*This needs to be fetching the right choice from ChooseClinic Page*/}
             <div><p>You are now in line for a walk-in appointment.<br /><br />
             <strong>You will receive an SMS reminder 30 minutes before your appointment.<br />And another reminder 15 minutes before.</strong><br /><br />  
             Make sure to be on time!</p></div>

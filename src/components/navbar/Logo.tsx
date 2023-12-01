@@ -11,7 +11,7 @@ interface Props {
 const Logo: React.FC<Props> = ({setNav}) => {
  
     return (
-        <StyledLogo onClick={() => setNav("sign-in")}>  
+        <StyledLogo onClick={() => setNav("frontpage")}>  
             <img src={myLogo} alt="A blue and white medical cross logo" />
         </StyledLogo>
     )

@@ -6,7 +6,6 @@ import Frontpage from './components/frontpage';
 import cloud from "./assets/cloudmain.svg"
 import { CloudContainer,Cloud } from './components/frontpage/cloud';
 import Payment from './components/paymentSite/payment';
-
 import NoIdPage from './components/signIn/NoId';
 import Ticket from './components/Ticket/Ticket';
 import useTicket from './components/Ticket/useTicket';
@@ -21,7 +20,7 @@ function App () {
 
   const { ticketNumber, lastNumber, waitTime, requestNewTicket } = useTicket();
 
-  const[nav, setNav] = useState("frontpage");  //The string inside the useState() should be our frontpage. It's inital page for the website
+  const[nav, setNav] = useState("ticket");  //The string inside the useState() should be our frontpage. It's inital page for the website
 
   const [clinic, setClinic] = useState("");
 
@@ -31,7 +30,6 @@ function App () {
   };
   
   const pages: {[page:string]:JSX.Element} = {
-    // "frontpage": < frontpage component  />,
     "clinic": <ChooseClinic setNav={setNav} setClinic={setClinic} />,    //'name of page' and component
     "ticket": <Ticket ticketNumber={ticketNumber} 
               lastNumber={lastNumber} 
@@ -43,8 +41,8 @@ function App () {
     "contact": <Contact />,
     "sign-in": <IdPage setNav={setNav}  />,
     "sign-in-two": <NoIdPage setNav = {setNav} />,
-    "frontpage": <Frontpage/>,
-    "payment": <Payment />
+    "frontpage": <Frontpage setNav={setNav}/>,
+    "payment": <Payment setNav={setNav} clinic={clinic} />
   }     
 
   return (

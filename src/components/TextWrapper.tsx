@@ -13,7 +13,6 @@ const StyledTextWrapper = styled.div`
     
     @media (max-width: 768px) {
     align-items: center;
-    margin: 50px;
     }
 
 `

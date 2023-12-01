@@ -1,5 +1,4 @@
-import React from 'react';
-import {useState} from "react";
+import React, {useState} from 'react';
 import { Burger, Menu, Navbar, Logo,} from './components/navbar'
 import "./index.css"
 import { ContentWrapper } from './components/ContentWrapper';
@@ -12,19 +11,14 @@ import ChooseClinic from './components/chooseClinic/ChooseClinic';
 import TextWrapper from './components/TextWrapper';
 import IdPage from './components/signIn/Id';
 
-
 function App () {
   const[open, setOpen] = React.useState(false)
 
   const { ticketNumber, lastNumber, waitTime, requestNewTicket } = useTicket();
-                // const [ticketNumber, setTicketNumber] = useState(294);  // Initial ticket number for the Ticket page
 
-                // const requestNewTicket = () => {
-                //   // const newTicketNumber = /* Call your API here to get the new ticket number */;
-                //   setTicketNumber(prevNumber => prevNumber + 7);  // Increment the ticket number as is
-                // };
+  const[nav, setNav] = useState("clinic");  //The string inside the useState() should be our frontpage. It's inital page for the website
 
-  const[nav, setNav] = useState("clinic")  //The string inside the useState() should be our frontpage. It's inital page for the website
+  const [clinic, setClinic] = useState("");
 
   const navChange = (actionNav: string) => {
     setNav(actionNav);  // 
@@ -33,18 +27,18 @@ function App () {
   
   const pages: {[page:string]:JSX.Element} = {
     // "frontpage": < frontpage component  />,
-    "clinic": <ChooseClinic />,    //'name of page' and component
+    "clinic": <ChooseClinic setNav={setNav} setClinic={setClinic} />,    //'name of page' and component
     "ticket": <Ticket ticketNumber={ticketNumber} 
               lastNumber={lastNumber} 
               waitTime={waitTime.toString()}  //this has to be changed so it can pass as a string
               requestNewTicket={requestNewTicket}
-              setNav={setNav} />,
+              setNav={setNav}
+              clinic={clinic} />,
     "about": <About />,
     "contact": <Contact />,
     "sign-in": <IdPage setNav={setNav}  />,
     "sign-in-two": <NoIdPage setNav = {setNav} />,
-    
-
+    // "payment": <ChoosePay />
   }     
 
   return (

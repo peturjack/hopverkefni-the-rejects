@@ -8,17 +8,18 @@ import { ContentWrapper } from './components/ContentWrapper';
 import Frontpage from './components/frontpage';
 import cloud from "./assets/cloudmain.svg"
 import { CloudContainer,Cloud } from './components/frontpage/cloud';
+import Payment from './components/paymentSite/payment';
 
 
 function App () {
   const[open, setOpen] = React.useState(false)
 
 
-  const[nav, setNav] = useState("frontpage")
+  const[nav, setNav] = useState("payment")
   const pages: {[page:string]:JSX.Element} = {
     "frontpage": <Frontpage/>,
-    "clinic" : <ChooseClinic />
-
+    "clinic" : <ChooseClinic />,
+    "payment": <Payment />
   }
 
   return (

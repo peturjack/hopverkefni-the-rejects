@@ -10,10 +10,16 @@ import visa from "../../assets/visa.svg";
 import applePay from "../../assets/apple-pay.svg";
 import googlePlay from "../../assets/google-pay.svg";
 import { ChoosePaymentContainer, LiveLocation } from "./choosePaymentMethod";
-import { MyModule } from "./payModule";
+import { MyModule } from "./payModule.styled";
 import { CardDetails } from "./cardDetails";
+import React from "react";
 
-const Payment = () => {
+interface Props {
+  setNav: (nav: string) => void,
+  clinic: string,
+}
+
+const Payment: React.FC<Props> = ({setNav, clinic}) => {
   return (
     <>
       <FlexContainerColumn
@@ -22,7 +28,7 @@ const Payment = () => {
           gap:"4rem"
         }}
       >
-        <h1>HEILSUGÆSLAN ÁRBÆ</h1>
+        <h1>{clinic}</h1>
         <LiveLocation>
           <FlexContainerColumn style={{height:"100%"}}>
             
@@ -67,7 +73,7 @@ const Payment = () => {
             Your card will be charged in case of a no-show.
           </p>
         </ChoosePaymentContainer>
-        <PaymentButtonContainer>
+        <PaymentButtonContainer>    
         <FlexContainer>
           <PaymentButtons>
             <img
@@ -105,7 +111,7 @@ const Payment = () => {
              
       </FlexContainerColumn  >
       
-      <MyModule>
+       <MyModule>
               <h1 style={{textAlign:"center", paddingTop:"2rem"}}>PAYMENT METHODS</h1>
               <FlexContainer style={{paddingTop:"1.5rem", justifyContent:"space-evenly"}}>
                 <img style={{ height: "4.5rem" }} src={masterCard} alt="mastercard payment option" />
@@ -131,10 +137,10 @@ const Payment = () => {
                   <CardDetails />
                 </FlexContainerColumn>
               </FlexContainer>
-              <ButtonPrimary style={{width:"100%", height:"5.4rem", marginTop:"2rem"}}>ADD PAYMENT</ButtonPrimary>
+              <ButtonPrimary onClick={() => setNav('ticket')} style={{width:"100%", height:"5.4rem", marginTop:"2rem"}}>ADD PAYMENT</ButtonPrimary>
              </FlexContainerColumn>
 
-             </MyModule>
+             </MyModule> 
 
    
     </>

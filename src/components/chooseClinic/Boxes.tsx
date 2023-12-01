@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
  const Boxes = styled.div`
-    font-size: 1.6rem;
+    font-size: 2rem;
     padding: 3rem 2.2rem;
     transition: .3s ease-in-out;
     cursor: pointer;

@@ -6,14 +6,15 @@ interface Props {
     lastNumber: number;
     waitTime: string;
     requestNewTicket: () => void;
-    setNav: (nav: string) => void;  // this is added here for navigation on requestNewTicket click
+    setNav: (nav: string) => void;
+    clinic: string;  // this is added here for navigation on requestNewTicket click
   }
 
-const Ticket: React.FC<Props> = ({ticketNumber, lastNumber, waitTime, requestNewTicket, setNav}) => {
+const Ticket: React.FC<Props> = ({ticketNumber, lastNumber, waitTime, requestNewTicket, setNav, clinic}) => {
     
     return (
         <>
-            <div><h1>Heilsugæslan Árbæ </h1></div>  {/*This needs to be fetching the right choice from ChooseClinic Page*/}
+            <h1>{clinic} </h1>  {/*This needs to be fetching the right choice from ChooseClinic Page*/}
             <div><p>You are now in line for a walk-in appointment.<br /><br />
             <strong>You will receive an SMS reminder 30 minutes before your appointment.<br />And another reminder 15 minutes before.</strong><br /><br />  
             Make sure to be on time!</p></div>
@@ -33,7 +34,6 @@ const Ticket: React.FC<Props> = ({ticketNumber, lastNumber, waitTime, requestNew
             </StyledTicket>
             <br/>
             <LateButton requestNewTicket={requestNewTicket} setNav={setNav} />
-            
         </>
     )
 }

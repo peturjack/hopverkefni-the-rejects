@@ -13,8 +13,7 @@
 }
 
 html {
-  font-size: 62.5%;
-  
+  font-size: 62.5%;  /* equivalant to 10px (for easy calc for us arithmetically challenged) */
 }
 
 body {
@@ -33,4 +32,8 @@ p{
 h1 {
   font-size: 2.4rem;
   font-weight: 500;
+}
+
+h2 {
+  font-size: 2rem;
 }

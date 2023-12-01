@@ -10,7 +10,6 @@ const Navbar: React.FC<Props> = ({ children }) => {
         <StyledNav>
             {children}
         </StyledNav>
-    
     )     
 };
 

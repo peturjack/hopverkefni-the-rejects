@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
- const ButtonPrimary = styled(motion.button) `
-    font-size: 1.6rem;
-    padding: 1rem;
+ const ButtonPrimary = styled.button `
+    font-size: 2rem;
+    padding: 2rem;
     border: none;
     background-color: #276989;
     color: white;
@@ -18,7 +18,8 @@ import { motion } from "framer-motion";
 
 const AppLoginButton = styled(ButtonPrimary)`
     color: black;
-    background-color: beige;
+    font-size: 1.6rem;
+    background-color: white;
     &&:hover {
         background-color: #dadaba;
     }

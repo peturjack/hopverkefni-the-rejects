@@ -1,13 +1,22 @@
+import React from 'react';
 import { StyledLogo } from './Logo.styled';
-import myLogo from '../../assets/healthcare-hospital-medical-47-svgrepo-com.svg'
+import myLogo from '../../assets/logo.svg';
 
-const Logo = () => {
+interface Props {
+    setNav: (navItem: string) => void, 
+    // the prop setNav takes the argument navItem and returns nothing. This changes the navigation state. 
+}
 
+
+const Logo: React.FC<Props> = ({setNav}) => {
+ 
     return (
-        <StyledLogo>
-            <img src={myLogo} alt="Image of a clock" />
+        <StyledLogo onClick={() => setNav("sign-in")}>  
+            <img src={myLogo} alt="A blue and white medical cross logo" />
         </StyledLogo>
     )
 };
 
 export default Logo;
+
+// Need to fix the onClick for the logo 

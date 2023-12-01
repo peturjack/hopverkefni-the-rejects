@@ -9,6 +9,18 @@ export const StyledMenu = styled.nav<Props>`
   display: flex;
   justify-content: space-evenly;
 
+  button {
+    color: #293437;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;   //Font weight 400 er Regular
+    line-height: 24px;
+    margin: 0 10px; // this adds a horizontal margin
+    background: transparent;
+    border: none;
+    
+  }
+
   a {
     color: #293437;
     text-decoration: none;

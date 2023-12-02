@@ -4,11 +4,11 @@ import {ButtonPrimary} from "../Button";
 
 const Title = styled.h2`
    font-family: Roboto;
-   font-size: 24px;
-   font-style: normal;
+   font-size: 30px;
    font-weight: 500;
    line-height: normal;
    letter-spacing: 1.2px;
+   margin-top: -7rem;
 `
 const Container = styled.div `
     display: Flex;
@@ -27,9 +27,9 @@ const PhoneBar = styled.input `
     margin-top:10px;
     padding-top:10px;
     border: none;
-    padding-left: 2px;
+    padding-left: 7px;
     &&::placeholder {
-        font-size: 2.6rem;
+        font-size: 2rem;
     }
 `
 const StylePhoneNr = styled.div `
@@ -60,11 +60,11 @@ const PageTwoSignIn: React.FC<Props> = function ({setNav}){
     return ( <Container> 
        <Title>Sign In</Title>
        <div>
-        <StylePhoneNr>Name</StylePhoneNr>
+        <StylePhoneNr></StylePhoneNr>
         <PhoneBar placeholder='Name' type='Text'></PhoneBar>
         </div>
       <div>
-        <StylePhoneNr>Phone Number</StylePhoneNr>
+        <StylePhoneNr></StylePhoneNr>
         <PhoneBar placeholder='Phone Number' type='Text'></PhoneBar>
         <CheckBox text={"Remember me"}/>
       </div>

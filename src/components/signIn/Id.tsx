@@ -23,7 +23,7 @@ const IdPage: React.FC<Props> = ({setNav}) => {
     return (
     <StyledIdPage>
         <SignInPhone setNav={setNav}/>
-        <MoreOptions/>
+        <MoreOptions setNav={setNav}/>
     </StyledIdPage>
     );
 };

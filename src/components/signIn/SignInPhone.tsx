@@ -3,20 +3,24 @@ import styled from 'styled-components';
 import CheckBox from "../CheckBox";
 import { ButtonPrimary } from "../Button";
 
+
 const Title = styled.h2`
    font-family: Roboto;
-   font-size: 24px;
+   font-size: 30px;
    font-style: normal;
    font-weight: 500;
    line-height: normal;
    letter-spacing: 1.2px;
+   margin-top: -7rem;
+   justify-content: center;
 `
 const Container = styled.div `
-    display: Flex;
-    justify-content: Center;
+    display: flex;
+    justify-content: center;
     flex-direction: column;
-    align-items: Center;
+    align-items: center;
     gap: 2rem;
+   
 `
 const PhoneBar = styled.input `
     border-radius: 5px;
@@ -26,8 +30,9 @@ const PhoneBar = styled.input `
     flex-shrink: 0;
     margin-top:10px;
     padding-top:10px;
-    padding-left: 2px;
+    border:none;
     &&::placeholder {
+        padding-left: 7px;
         font-size: 2.6rem;
     }
 `
@@ -37,7 +42,8 @@ const StylePhoneNr = styled.div `
      font-style: normal;
      font-weight: 400;
      line-height: normal;
-     padding-left: 3px;
+     padding-left: 7px;    
+    
 `
 
 interface Props {
@@ -50,12 +56,12 @@ const SignInPhone: React.FC<Props> = function ({setNav}){
     <Container> 
        <Title>Sign In</Title>
        <div>
-        <StylePhoneNr>Phone Number</StylePhoneNr>
+        <StylePhoneNr></StylePhoneNr>
         <PhoneBar placeholder='000-000' type='Text'></PhoneBar>
         <CheckBox text={"Remember me"}/>
       </div>
       <ButtonPrimary onClick={() => setNav("clinic")}>Authenticate</ButtonPrimary>
-    </Container>
+     </Container>
     )
 }
 export default SignInPhone

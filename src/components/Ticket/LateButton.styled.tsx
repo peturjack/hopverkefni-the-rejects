@@ -28,17 +28,17 @@ export const ModalContent = styled.div`
   width: 75%;
 `;
 
-export const CloseModal = styled.div`  // I want this to be part of when requesting new ticket, there should be no need for this
-  height: 2rem;
-  width: 100%;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  padding: 6rem;
-  font-size: 1.6rem;
-  text-align: center;
+// export const CloseModal = styled.div`  // I want this to be part of when requesting new ticket, there should be no need for this
+//   height: 2rem;
+//   width: 100%;
+//   top: 10px;
+//   right: 10px;
+//   cursor: pointer;
+//   padding: 6rem;
+//   font-size: 1.6rem;
+//   text-align: center;
 
-`;
+// `;
 
 export const Paragraph = styled.p`
   margin-bottom: 3rem;

@@ -20,7 +20,7 @@ function App () {
 
   const { ticketNumber, lastNumber, waitTime, requestNewTicket } = useTicket();
 
-  const[nav, setNav] = useState("ticket");  //The string inside the useState() should be our frontpage. It's inital page for the website
+  const[nav, setNav] = useState("frontpage");  //The string inside the useState() should be our frontpage. It's inital page for the website
 
   const [clinic, setClinic] = useState("");
 
@@ -38,7 +38,7 @@ function App () {
               setNav={setNav}
               clinic={clinic} />,
     "about": <About />,
-    "contact": <Contact />,
+    "contact": <Contact setNav={setNav}/>,
     "sign-in": <IdPage setNav={setNav}  />,
     "sign-in-two": <NoIdPage setNav = {setNav} />,
     "frontpage": <Frontpage setNav={setNav}/>,

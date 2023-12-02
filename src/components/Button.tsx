@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
  const ButtonPrimary = styled.button `
-    font-size: 1.6rem;
-    padding: 1rem;
+    font-size: 2rem;
+    padding: 2rem;
     border: none;
+    width:200px;
     background-color: #276989;
     color: white;
     border-radius: 0.3rem;
@@ -17,8 +18,12 @@ import styled from "styled-components";
 
 const AppLoginButton = styled(ButtonPrimary)`
     color: black;
-    
-    background-color: beige;
+    background-color:white;
+    font-size:1.6rem;
+    height: 45px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
     &&:hover {
         background-color: #dadaba;
     }

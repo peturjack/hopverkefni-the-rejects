@@ -24,7 +24,7 @@ function App () {
                 //   setTicketNumber(prevNumber => prevNumber + 7);  // Increment the ticket number as is
                 // };
 
-  const[nav, setNav] = useState("sign-in")  //The string inside the useState() should be our frontpage. It's inital page for the website
+  const[nav, setNav] = useState("sign-in" )  //The string inside the useState() should be our frontpage. It's inital page for the website
 
   const navChange = (actionNav: string) => {
     setNav(actionNav);  // 
@@ -43,6 +43,7 @@ function App () {
     "contact": <Contact />,
     "sign-in": <IdPage setNav={setNav}  />,
     "sign-in-two": <NoIdPage setNav = {setNav} />,
+
     
 
   }     

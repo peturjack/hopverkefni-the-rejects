@@ -1,4 +1,3 @@
-import {useState} from 'react';
 import styled from 'styled-components';
 
 // This is the Modal after submitting form. 

@@ -4,6 +4,7 @@ import {
   FlexContainerColumn,
   PaymentButtonContainer,
 } from "./paymentButtons";
+import { useState } from "react";
 import { ButtonPrimary } from "../Button";
 import masterCard from "../../assets/mastercard.svg";
 import visa from "../../assets/visa.svg";
@@ -13,7 +14,23 @@ import { ChoosePaymentContainer, LiveLocation } from "./choosePaymentMethod";
 import { MyModule } from "./payModule";
 import { CardDetails } from "./cardDetails";
 
-const Payment = () => {
+interface Props {
+  clinic: string
+  setNav: (nav: string) => void;  
+}
+
+const Payment: React.FC<Props> = ({ setNav, clinic }) => {
+  
+  const [modalOpen, setModalOpen] = useState(false)
+  const handleModalOpen = () => {
+    setModalOpen(true)
+  }
+  const handleModalClose = () => {
+    setModalOpen(false)
+    setNav("ticket")
+    
+  }
+
   return (
     <>
       <FlexContainerColumn
@@ -22,7 +39,7 @@ const Payment = () => {
           gap:"4rem"
         }}
       >
-        <h1>HEILSUGÆSLAN ÁRBÆ</h1>
+        <h1>{clinic}</h1>
         <LiveLocation>
           <FlexContainerColumn style={{height:"100%"}}>
             
@@ -69,14 +86,14 @@ const Payment = () => {
         </ChoosePaymentContainer>
         <PaymentButtonContainer>
         <FlexContainer>
-          <PaymentButtons>
+          <PaymentButtons onClick={handleModalOpen}>
             <img
               style={{ width: "70%" }}
               src={masterCard}
               alt="mastercard payment option"
             />
           </PaymentButtons>
-          <PaymentButtons>
+          <PaymentButtons onClick={handleModalOpen}>
             <img
               style={{ width: "70%" }}
               src={visa}
@@ -85,14 +102,14 @@ const Payment = () => {
           </PaymentButtons>
         </FlexContainer>
         <FlexContainer>
-          <PaymentButtons>
+          <PaymentButtons onClick={handleModalOpen}>
             <img
               style={{ width: "70%" }}
               src={applePay}
               alt="apple payment option"
             />
           </PaymentButtons>
-          <PaymentButtons>
+          <PaymentButtons onClick={handleModalOpen}>
             <img
               style={{ width: "70%" }}
               src={googlePlay}
@@ -104,14 +121,14 @@ const Payment = () => {
 
              
       </FlexContainerColumn  >
-      
-      <MyModule>
-              <h1 style={{textAlign:"center", paddingTop:"2rem"}}>PAYMENT METHODS</h1>
-              <FlexContainer style={{paddingTop:"1.5rem", justifyContent:"space-evenly"}}>
-                <img style={{ height: "4.5rem" }} src={masterCard} alt="mastercard payment option" />
-                <img style={{ width: "7rem" }} src={visa} alt="visa payment option" />
-                <img style={{ width: "7rem" }} src={applePay} alt="apple payment option" />
-                <img style={{ width: "7rem" }} src={googlePlay} alt="google payment option" />
+      {modalOpen &&(
+              <MyModule>
+              <h1 style={{textAlign:"center", padding:"2rem 0"}}>PAYMENT METHODS</h1>
+              <FlexContainer style={{padding:"1.5rem 15%", justifyContent:"space-evenly"}}>
+                <img style={{ height: "2.5rem" }} src={masterCard} alt="mastercard payment option" />
+                <img style={{ width: "5rem" }} src={visa} alt="visa payment option" />
+                <img style={{ width: "5rem" }} src={applePay} alt="apple payment option" />
+                <img style={{ width: "5rem" }} src={googlePlay} alt="google payment option" />
               </FlexContainer >
 
               <FlexContainerColumn style={{padding:" 0 15%", gap:"1rem"}}>
@@ -131,10 +148,11 @@ const Payment = () => {
                   <CardDetails />
                 </FlexContainerColumn>
               </FlexContainer>
-              <ButtonPrimary style={{width:"100%", height:"5.4rem", marginTop:"2rem"}}>ADD PAYMENT</ButtonPrimary>
+              <ButtonPrimary onClick={handleModalClose} style={{width:"100%", height:"5.4rem", marginTop:"2rem"}}>ADD PAYMENT</ButtonPrimary>
              </FlexContainerColumn>
 
              </MyModule>
+      )}
 
    
     </>

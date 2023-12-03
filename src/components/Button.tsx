@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 
  const ButtonPrimary = styled.button `
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2rem;
     padding: 2rem;
     border: none;
@@ -18,21 +21,16 @@ import styled from "styled-components";
     }
 `
 
-
-
 const AppLoginButton = styled(ButtonPrimary)`
     color: black;
     background-color:white;
     font-size:1.6rem;
     height: 45px;
     width: 200px;
-    justify-content: center;
-    align-items: center;
-    &&:hover {
-        background-color: #dadaba;
+    &&&:hover {
+        background-color: #d9bada;
     }
 `
-
 
 
 export { ButtonPrimary, AppLoginButton };

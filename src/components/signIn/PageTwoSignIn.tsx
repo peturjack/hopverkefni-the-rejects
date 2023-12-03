@@ -3,7 +3,6 @@ import CheckBox from "../CheckBox";
 import {ButtonPrimary} from "../Button";
 
 const Title = styled.h2`
-   font-family: Roboto;
    font-size: 30px;
    font-weight: 500;
    line-height: normal;
@@ -16,7 +15,6 @@ const Container = styled.div `
     flex-direction: column;
     align-items: Center;
     gap: 0rem;
-  
 `
 const PhoneBar = styled.input `
     border-radius: 5px;
@@ -33,14 +31,12 @@ const PhoneBar = styled.input `
     }
 `
 const StylePhoneNr = styled.div `
-     font-family: Roboto;
      font-size: 16px;
      font-style: normal;
      font-weight: 400;
      line-height: normal;
      padding-left: 3px;
-     border:none;
-    
+     border:none;  
  `
 const AuthenticateButton = styled(ButtonPrimary)`
     margin-top: 3rem;
@@ -48,8 +44,7 @@ const AuthenticateButton = styled(ButtonPrimary)`
     padding: 20px 30px;
     padding-top: 20px;
     padding-bottom: 20px;
-    
-    `
+`
 
 interface Props {
         setNav: (nav: string) => void;  // this is added here for navigation
@@ -72,4 +67,5 @@ const PageTwoSignIn: React.FC<Props> = function ({setNav}){
       </Container>
       )
 }
+
 export default PageTwoSignIn

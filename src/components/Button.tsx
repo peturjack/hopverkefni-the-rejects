@@ -1,10 +1,13 @@
 import styled from "styled-components";
-import { motion } from "framer-motion";
+
 
  const ButtonPrimary = styled.button `
     font-size: 2rem;
     padding: 2rem;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width:200px;
     background-color: #276989;
     color: white;

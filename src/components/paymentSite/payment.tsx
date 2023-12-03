@@ -4,6 +4,7 @@ import {
   FlexContainerColumn,
   PaymentButtonContainer,
 } from "./paymentButtons";
+import { useState } from "react";
 import { ButtonPrimary } from "../Button";
 import masterCard from "../../assets/mastercard.svg";
 import visa from "../../assets/visa.svg";
@@ -15,11 +16,22 @@ import { CardDetails } from "./cardDetails";
 import React from "react";
 
 interface Props {
-  setNav: (nav: string) => void,
-  clinic: string,
+  clinic: string
+  setNav: (nav: string) => void;  
 }
 
-const Payment: React.FC<Props> = ({setNav, clinic}) => {
+const Payment: React.FC<Props> = ({ setNav, clinic }) => {
+  
+  const [modalOpen, setModalOpen] = useState(false)
+  const handleModalOpen = () => {
+    setModalOpen(true)
+  }
+  const handleModalClose = () => {
+    setModalOpen(false)
+    setNav("ticket")
+    
+  }
+
   return (
     <>
       <FlexContainerColumn
@@ -75,14 +87,14 @@ const Payment: React.FC<Props> = ({setNav, clinic}) => {
         </ChoosePaymentContainer>
         <PaymentButtonContainer>    
         <FlexContainer>
-          <PaymentButtons>
+          <PaymentButtons onClick={handleModalOpen}>
             <img
               style={{ width: "70%" }}
               src={masterCard}
               alt="mastercard payment option"
             />
           </PaymentButtons>
-          <PaymentButtons>
+          <PaymentButtons onClick={handleModalOpen}>
             <img
               style={{ width: "70%" }}
               src={visa}
@@ -91,14 +103,14 @@ const Payment: React.FC<Props> = ({setNav, clinic}) => {
           </PaymentButtons>
         </FlexContainer>
         <FlexContainer>
-          <PaymentButtons>
+          <PaymentButtons onClick={handleModalOpen}>
             <img
               style={{ width: "70%" }}
               src={applePay}
               alt="apple payment option"
             />
           </PaymentButtons>
-          <PaymentButtons>
+          <PaymentButtons onClick={handleModalOpen}>
             <img
               style={{ width: "70%" }}
               src={googlePlay}
@@ -110,14 +122,14 @@ const Payment: React.FC<Props> = ({setNav, clinic}) => {
 
              
       </FlexContainerColumn  >
-      
-       <MyModule>
-              <h1 style={{textAlign:"center", paddingTop:"2rem"}}>PAYMENT METHODS</h1>
-              <FlexContainer style={{paddingTop:"1.5rem", justifyContent:"space-evenly"}}>
-                <img style={{ height: "4.5rem" }} src={masterCard} alt="mastercard payment option" />
-                <img style={{ width: "7rem" }} src={visa} alt="visa payment option" />
-                <img style={{ width: "7rem" }} src={applePay} alt="apple payment option" />
-                <img style={{ width: "7rem" }} src={googlePlay} alt="google payment option" />
+      {modalOpen &&(
+              <MyModule>
+              <h1 style={{textAlign:"center", padding:"2rem 0"}}>PAYMENT METHODS</h1>
+              <FlexContainer style={{padding:"1.5rem 15%", justifyContent:"space-evenly"}}>
+                <img style={{ height: "2.5rem" }} src={masterCard} alt="mastercard payment option" />
+                <img style={{ width: "5rem" }} src={visa} alt="visa payment option" />
+                <img style={{ width: "5rem" }} src={applePay} alt="apple payment option" />
+                <img style={{ width: "5rem" }} src={googlePlay} alt="google payment option" />
               </FlexContainer >
 
               <FlexContainerColumn style={{padding:" 0 15%", gap:"1rem"}}>
@@ -137,10 +149,11 @@ const Payment: React.FC<Props> = ({setNav, clinic}) => {
                   <CardDetails />
                 </FlexContainerColumn>
               </FlexContainer>
-              <ButtonPrimary onClick={() => setNav('ticket')} style={{width:"100%", height:"5.4rem", marginTop:"2rem"}}>ADD PAYMENT</ButtonPrimary>
+              <ButtonPrimary onClick={handleModalClose} setNav={setNav} clinic={clinic} style={{width:"100%", height:"5.4rem", marginTop:"2rem"}}>ADD PAYMENT</ButtonPrimary>
              </FlexContainerColumn>
 
-             </MyModule> 
+             </MyModule>
+      )}
 
    
     </>

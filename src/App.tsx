@@ -15,12 +15,16 @@ import ChooseClinic from './components/chooseClinic/ChooseClinic';
 import TextWrapper from './components/TextWrapper';
 import IdPage from './components/signIn/Id';
 
-function App () {
+ function App () {
+
+
+  
+  
   const[open, setOpen] = React.useState(false)
 
   const { ticketNumber, lastNumber, waitTime, requestNewTicket } = useTicket();
 
-  const[nav, setNav] = useState("ticket");  //The string inside the useState() should be our frontpage. It's inital page for the website
+  const[nav, setNav] = useState("payment");  //The string inside the useState() should be our frontpage. It's inital page for the website
 
   const [clinic, setClinic] = useState("");
 

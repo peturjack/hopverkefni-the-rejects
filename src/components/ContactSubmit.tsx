@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-// This is the Modal after submitting form. 
+// This is the Thank you for contacting us Modal after submitting form.  
 
 
 const FormStyle = styled.div`

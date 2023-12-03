@@ -33,6 +33,7 @@ export const StyledMenu = styled.nav<Props>`
   @media (max-width: 768px) {
     flex-flow: column wrap;
     background-color: rgb(182,230,233);
+    padding: 1.5rem 0;
     z-index: 10; 
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(120%)'};
@@ -42,7 +43,7 @@ export const StyledMenu = styled.nav<Props>`
     list-style: none;
     display: flex;
     width: 37%;
-    height: 15%;
+    height: 18%;
     transition: transform 0.5s ease-in-out ;
     align-items: center;
     border-radius: 0.8rem;

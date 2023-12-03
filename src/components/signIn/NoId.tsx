@@ -25,7 +25,7 @@ const NoIdPage: React.FC<Props> = ({setNav}) => {
     return (
     <StyledNoIdPage>
         <PageTwoSignIn setNav={setNav}/>
-          <MoreOptions setNav={setNav}/>
+        <MoreOptions setNav={setNav}/>
     </StyledNoIdPage>
     );
 };

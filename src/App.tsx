@@ -40,8 +40,8 @@ import IdPage from './components/signIn/Id';
               clinic={clinic} />,
     "about": <About />,
     "contact": <Contact setNav={setNav}/>,
-    "sign-in": <IdPage setNav={setNav}  />,
-    "sign-in-two": <NoIdPage setNav = {setNav} />,
+    "sign-in": <IdPage setNav={setNav}/>,
+    "sign-in-two": <NoIdPage setNav = {setNav}/>,
     "frontpage": <Frontpage setNav={setNav}/>,
     "payment": <Payment setNav={setNav} clinic={clinic} />
   }     

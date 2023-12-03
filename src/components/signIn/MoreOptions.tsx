@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { AppLoginButton } from '../Button';
+
 const Title = styled.p`
     color: #000;
-    font-family: Roboto;
     font-size: 16px;
     font-style: normal;
 `
@@ -21,6 +21,7 @@ interface Props {
 }
 
 const MoreOptions: React.FC<Props> = function ({setNav}){ 
+
     return ( 
     <Container> 
        <Title>More Options</Title>
@@ -31,7 +32,6 @@ const MoreOptions: React.FC<Props> = function ({setNav}){
       <AppLoginButton onClick={() => setNav("sign-in-two")}>Electronic ID</AppLoginButton>
       </div>
     </Container>
-
     )
 }
 

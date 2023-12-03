@@ -9,11 +9,10 @@ const CheckboxContainer = styled.label`
   display: flex;
   align-items: Center;
   padding-top: 0.8rem;
-
 `;
 
 const CheckboxInput = styled.input`
-  margin-right:10px;
+  margin-right: 10px;
 `;
 
 const CheckboxText = styled.p`

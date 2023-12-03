@@ -26,18 +26,14 @@ const PhoneBar = styled.input `
     padding-top:10px;
     border: none;
     padding-left: 7px;
+    font-size: 2rem;
+    outline: none;
+
     &&::placeholder {
         font-size: 2rem;
     }
 `
-const StylePhoneNr = styled.div `
-     font-size: 16px;
-     font-style: normal;
-     font-weight: 400;
-     line-height: normal;
-     padding-left: 3px;
-     border:none;  
- `
+
 const AuthenticateButton = styled(ButtonPrimary)`
     margin-top: 3rem;
     margin-bottom: 10rem;
@@ -55,12 +51,10 @@ const PageTwoSignIn: React.FC<Props> = function ({setNav}){
     return ( <Container> 
        <Title>Sign In</Title>
        <div>
-        <StylePhoneNr></StylePhoneNr>
         <PhoneBar placeholder='Name' type='Text'></PhoneBar>
         </div>
       <div>
-        <StylePhoneNr></StylePhoneNr>
-        <PhoneBar placeholder='Phone Number' type='Text'></PhoneBar>
+        <PhoneBar placeholder='Phone Number' type='tel'></PhoneBar>
         <CheckBox text={"Remember me"}/>
       </div>
       <AuthenticateButton onClick={() => setNav("clinic")} >Authenticate</AuthenticateButton>

@@ -15,6 +15,7 @@ const StyledForm = styled.div`
         align-items: center;
         width: 90%;
 `
+
 const FormDiv = styled.form`
     width: 100%;
     display: flex;
@@ -61,7 +62,7 @@ const Contact: React.FC<Props> = ({setNav}) => {
 
     formData.append("access_key", "494213e6-4e78-462d-adbe-21a9573eba30");
 
-    const res = await fetch("https://api.web3forms.com/submit", {
+    const res = await fetch( "https://api.web3forms.com/submit", {
       method: "POST",
       body: formData
     }).then((res) => res.json());

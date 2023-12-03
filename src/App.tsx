@@ -15,7 +15,8 @@ import ChooseClinic from './components/chooseClinic/ChooseClinic';
 import TextWrapper from './components/TextWrapper';
 import IdPage from './components/signIn/Id';
 
-function App () {
+ function App () {
+
   const[open, setOpen] = React.useState(false)
 
   const { ticketNumber, lastNumber, waitTime, requestNewTicket } = useTicket();

@@ -54,11 +54,8 @@ interface Props {
   }
 
 const FormSubmit: React.FC<Props> = ({ setNav })  => {
-    
-    const [showModal, setShowModal] = useState(false);
 
     const handleCloseModal = () => {
-        setShowModal(false);
         setNav('frontpage');  
         console.log('close Modal');
     };

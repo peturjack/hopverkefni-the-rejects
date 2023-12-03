@@ -1,9 +1,7 @@
 import styled from "styled-components";
-      
-
-
 
 export const MyModule = styled.div`
+    
     left: 0;
     right: 0;
     height: 65%;
@@ -16,4 +14,3 @@ export const MyModule = styled.div`
         color: red;
     }
 `
-

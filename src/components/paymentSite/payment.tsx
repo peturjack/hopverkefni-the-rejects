@@ -11,8 +11,9 @@ import visa from "../../assets/visa.svg";
 import applePay from "../../assets/apple-pay.svg";
 import googlePlay from "../../assets/google-pay.svg";
 import { ChoosePaymentContainer, LiveLocation } from "./choosePaymentMethod";
-import { MyModule } from "./payModule";
+import { MyModule } from "./payModule.styled";
 import { CardDetails } from "./cardDetails";
+import React from "react";
 
 interface Props {
   clinic: string
@@ -84,7 +85,7 @@ const Payment: React.FC<Props> = ({ setNav, clinic }) => {
             Your card will be charged in case of a no-show.
           </p>
         </ChoosePaymentContainer>
-        <PaymentButtonContainer>
+        <PaymentButtonContainer>    
         <FlexContainer>
           <PaymentButtons onClick={handleModalOpen}>
             <img
@@ -148,7 +149,7 @@ const Payment: React.FC<Props> = ({ setNav, clinic }) => {
                   <CardDetails />
                 </FlexContainerColumn>
               </FlexContainer>
-              <ButtonPrimary onClick={handleModalClose} style={{width:"100%", height:"5.4rem", marginTop:"2rem"}}>ADD PAYMENT</ButtonPrimary>
+              <ButtonPrimary onClick={handleModalClose} setNav={setNav} clinic={clinic} style={{width:"100%", height:"5.4rem", marginTop:"2rem"}}>ADD PAYMENT</ButtonPrimary>
              </FlexContainerColumn>
 
              </MyModule>

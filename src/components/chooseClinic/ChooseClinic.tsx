@@ -14,7 +14,8 @@ interface Props {
   const [search, setSearch] = useState("")
 
   const boxClick = (clinicName:string) => {
-    setNav("ticket");
+    console.log(clinicName);
+    setNav("payment");
     setClinic(clinicName);
   }
 

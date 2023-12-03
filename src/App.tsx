@@ -6,7 +6,6 @@ import Frontpage from './components/frontpage';
 import cloud from "./assets/cloudmain.svg"
 import { CloudContainer,Cloud } from './components/frontpage/cloud';
 import Payment from './components/paymentSite/payment';
-
 import NoIdPage from './components/signIn/NoId';
 import Ticket from './components/Ticket/Ticket';
 import useTicket from './components/Ticket/useTicket';
@@ -35,7 +34,6 @@ import IdPage from './components/signIn/Id';
   };
   
   const pages: {[page:string]:JSX.Element} = {
-    // "frontpage": < frontpage component  />,
     "clinic": <ChooseClinic setNav={setNav} setClinic={setClinic} />,    //'name of page' and component
     "ticket": <Ticket ticketNumber={ticketNumber} 
               lastNumber={lastNumber} 
@@ -47,8 +45,8 @@ import IdPage from './components/signIn/Id';
     "contact": <Contact />,
     "sign-in": <IdPage setNav={setNav}  />,
     "sign-in-two": <NoIdPage setNav = {setNav} />,
-    "frontpage": <Frontpage/>,
-    "payment": <Payment setNav = {setNav} />
+    "frontpage": <Frontpage setNav={setNav}/>,
+    "payment": <Payment setNav={setNav} clinic={clinic} />
   }     
 
   return (

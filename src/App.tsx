@@ -34,7 +34,7 @@ import IdPage from './components/signIn/Id';
     "clinic": <ChooseClinic setNav={setNav} setClinic={setClinic} />,    //'name of page' and component
     "ticket": <Ticket ticketNumber={ticketNumber} 
               lastNumber={lastNumber} 
-              waitTime={waitTime.toString()}  //this has to be changed so it can pass as a string
+              waitTime={waitTime.toString()}  //Changed to .toString so waitTime state can handle it as a string.
               requestNewTicket={requestNewTicket}
               setNav={setNav}
               clinic={clinic} />,

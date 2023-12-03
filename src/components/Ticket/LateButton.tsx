@@ -15,15 +15,10 @@ const LateButton: React.FC<Props> = ({ requestNewTicket, setNav }) => {
   };
 
   const handleCloseModal = () => {
-    setShowModal(false);
+    setShowModal(false);  
     setNav('ticket');  // This is for navigation when requestNewTicket is clicked
     console.log('close Modal');
   };
-
-  //const requestNewTicket = () => {
-  // handleCloseModal();
-  //   console.log('new ticket')  // This needs to call for a navChange
- //};    //This is what I had originally and I still need to find the navChange solution. 
 
   return (
     <div>

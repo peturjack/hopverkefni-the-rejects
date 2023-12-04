@@ -17,10 +17,19 @@ const Container = styled.div `
 `
 
 interface Props {
-    setNav: (nav: string) => void; 
+    setNav: (nav: string) => void;
+    nav: string;
 }
 
-const MoreOptions: React.FC<Props> = function ({setNav}){ 
+const MoreOptions: React.FC<Props> = function ({setNav, nav}){ 
+
+    const toggleId = () => {
+        if (nav === "sign-in") {
+            setNav("sign-in-two");
+        } else {
+            setNav("sign-in");
+        }
+    } 
 
     return ( 
     <Container> 
@@ -29,7 +38,7 @@ const MoreOptions: React.FC<Props> = function ({setNav}){
        <AppLoginButton>App Login</AppLoginButton>
       </div>
       <div>
-      <AppLoginButton onClick={() => setNav("sign-in-two")}>Electronic ID</AppLoginButton>
+      <AppLoginButton onClick={toggleId}>{nav==="sign-in"?"No Electronic ID":"Electronic ID"}</AppLoginButton>
       </div>
     </Container>
     )

@@ -28,7 +28,7 @@ const AppLoginButton = styled(ButtonPrimary)`
     height: 45px;
     width: 200px;
     &&&:hover {
-        background-color: #d9bada;
+        background-color: rgb(182,230,233);
     }
 `
 

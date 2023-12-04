@@ -16,10 +16,6 @@ html {
   font-size: 62.5%;  /* equivalant to 10px (for easy calc for us arithmetically challenged) */
 }
 
-body {
-  background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(182,230,233,1) 100%);
-}
 
 button {
   cursor: pointer;

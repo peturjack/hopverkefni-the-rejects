@@ -37,10 +37,10 @@ const Payment: React.FC<Props> = ({ setNav, clinic }) => {
       <FlexContainerColumn
         style={{
           width: "100%",
-          gap:"4rem"
+        
         }}
       >
-        <h1>{clinic}</h1>
+        <h1 style={{marginBottom:"2rem"}}>{clinic}</h1>
         <LiveLocation>
           <FlexContainerColumn style={{height:"100%"}}>
             
@@ -124,7 +124,7 @@ const Payment: React.FC<Props> = ({ setNav, clinic }) => {
       </FlexContainerColumn  >
       {modalOpen &&(
               <MyModule>
-              <h1 style={{textAlign:"center", padding:"2rem 0"}}>PAYMENT METHODS</h1>
+              <h1 style={{textAlign:"center", padding:"2rem 0", letterSpacing:"0.42rem"}}>PAYMENT METHODS</h1>
               <FlexContainer style={{padding:"1.5rem 15%", justifyContent:"space-evenly"}}>
                 <img style={{ height: "2.5rem" }} src={masterCard} alt="mastercard payment option" />
                 <img style={{ width: "5rem" }} src={visa} alt="visa payment option" />
@@ -132,24 +132,24 @@ const Payment: React.FC<Props> = ({ setNav, clinic }) => {
                 <img style={{ width: "5rem" }} src={googlePlay} alt="google payment option" />
               </FlexContainer >
 
-              <FlexContainerColumn style={{padding:" 0 15%", gap:"1rem"}}>
+              <FlexContainerColumn style={{padding:" 0 15%", }}>
               <FlexContainerColumn style={{width:"100%", alignItems:"start", }}>
-                <p style={{marginTop:"2rem", marginBottom:"0.5rem"}}>Name</p>
+                <p style={{marginTop:"1rem", marginBottom:"0.5rem"}}>Name</p>
                 <CardDetails />
-                <p style={{marginTop:"2rem", marginBottom:"0.5rem"}}>Card Number</p>
+                <p style={{marginTop:"1rem", marginBottom:"0.5rem"}}>Card Number</p>
                 <CardDetails/>
               </FlexContainerColumn>
               <FlexContainer>
                 <FlexContainerColumn style={{alignItems:"start"}}>
-                  <p style={{marginTop:"2rem", marginBottom:"0.5rem"}}>Expiry Date</p>
+                  <p style={{marginTop:"1rem", marginBottom:"0.5rem"}}>Expiry Date</p>
                   <CardDetails />
                 </FlexContainerColumn>
                 <FlexContainerColumn style={{alignItems:"start"}}>
-                  <p style={{marginTop:"2rem", marginBottom:"0.5rem"}}>CVV</p>
+                  <p style={{marginTop:"1rem", marginBottom:"0.5rem"}}>CVV</p>
                   <CardDetails />
                 </FlexContainerColumn>
               </FlexContainer>
-              <ButtonPrimary onClick={handleModalClose} style={{width:"100%", height:"5.4rem", marginTop:"2rem"}}>ADD PAYMENT</ButtonPrimary>
+              <ButtonPrimary onClick={handleModalClose} style={{width:"100%", height:"5.4rem", marginTop:"4rem"}}>ADD PAYMENT</ButtonPrimary>
              </FlexContainerColumn>
 
              </MyModule>

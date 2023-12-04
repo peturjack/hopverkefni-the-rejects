@@ -13,7 +13,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import ChooseClinic from './components/chooseClinic/ChooseClinic';
 import TextWrapper from './components/TextWrapper';
-
+import IdPage from './components/signIn/Id';
 
  function App () {
 
@@ -30,19 +30,18 @@ import TextWrapper from './components/TextWrapper';
     setOpen(false);  // this closes the menu when sth is clicked in menu
   };
   
-
   const pages: {[page:string]:JSX.Element} = {
     "clinic": <ChooseClinic setNav={setNav} setClinic={setClinic} />,    //'name of page' and component
     "ticket": <Ticket ticketNumber={ticketNumber} 
               lastNumber={lastNumber} 
-              waitTime={waitTime.toString()}  //Changed to .toString so waitTime state can handle it as a string.
+              waitTime={waitTime.toString()}  //this has to be changed so it can pass as a string
               requestNewTicket={requestNewTicket}
               setNav={setNav}
               clinic={clinic} />,
     "about": <About />,
     "contact": <Contact setNav={setNav}/>,
-    "sign-in": <NoIdPage setNav={setNav} nav={nav}/>,
-    "sign-in-two": <NoIdPage setNav = {setNav} nav={nav}/>,
+    "sign-in": <IdPage setNav={setNav}  />,
+    "sign-in-two": <NoIdPage setNav = {setNav} />,
     "frontpage": <Frontpage setNav={setNav}/>,
     "payment": <Payment setNav={setNav} clinic={clinic} />
   }     

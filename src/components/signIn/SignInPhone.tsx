@@ -1,15 +1,11 @@
-import React, { useState} from 'react';
 import styled from 'styled-components';
 import CheckBox from "../CheckBox";
 import { ButtonPrimary } from "../Button";
 
 
 const Title = styled.h2`
-   font-family: Roboto;
    font-size: 30px;
-   font-style: normal;
    font-weight: 500;
-   line-height: normal;
    letter-spacing: 1.2px;
    margin-top: -7rem;
    justify-content: center;
@@ -22,29 +18,27 @@ const Container = styled.div `
     gap: 2rem;
    
 `
-const PhoneBar = styled.input `
-    border-radius: 5px;
-    background: #FFF;
-    width: 283px;
-    height: 60px;
-    flex-shrink: 0;
-    margin-top:10px;
-    padding-top:10px;
-    border:none;
-    &&::placeholder {
+const PhoneBar = styled.input.attrs({
+    pattern: "\\d*",
+    inputMode: "numeric"   //adding this bc it hints to browsers to open numeric pad
+    }) `
+        border-radius: 5px;
+        background: #FFF;
+        width: 283px;
+        height: 60px;
+        flex-shrink: 0;
+        margin-top: 10px;
+        padding-top: 10px;
         padding-left: 7px;
+        outline: none;
+        border: none;
         font-size: 2.6rem;
-    }
-`
-const StylePhoneNr = styled.div `
-     font-family: Roboto;
-     font-size: 16px;
-     font-style: normal;
-     font-weight: 400;
-     line-height: normal;
-     padding-left: 7px;    
-    
-`
+
+        &&::placeholder {
+            padding-left: 7px;
+            font-size: 2.6rem;
+        }
+    `
 
 interface Props {
     setNav: (nav: string) => void;  // this is added here for navigation
@@ -56,10 +50,10 @@ const SignInPhone: React.FC<Props> = function ({setNav}){
     <Container> 
        <Title>Sign In</Title>
        <div>
-        <StylePhoneNr></StylePhoneNr>
-        <PhoneBar placeholder='000-000' type='Text'></PhoneBar>
+        <PhoneBar placeholder='000-000' type='tel'></PhoneBar>
         <CheckBox text={"Remember me"}/>
       </div>
+      <br></br>
       <ButtonPrimary onClick={() => setNav("clinic")}>Authenticate</ButtonPrimary>
      </Container>
     )

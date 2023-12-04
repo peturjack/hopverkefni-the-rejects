@@ -1,9 +1,7 @@
-import {useState} from 'react';
 import styled from 'styled-components';
 
-// This is the Modal after submitting form. 
-
-
+// This is the Thank you for contacting us Modal after submitting form.  
+// It pops up when Submit button has been clicked in Contact form and let's the user know that message has been received. 
 const FormStyle = styled.div`
   position: fixed;
   top: 50%;
@@ -54,11 +52,8 @@ interface Props {
   }
 
 const FormSubmit: React.FC<Props> = ({ setNav })  => {
-    
-    const [showModal, setShowModal] = useState(false);
 
-    const handleCloseModal = () => {
-        setShowModal(false);
+    const handleCloseModal = () => {   //when close button is clicked user navigates to frontpage
         setNav('frontpage');  
         console.log('close Modal');
     };

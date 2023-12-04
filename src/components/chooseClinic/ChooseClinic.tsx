@@ -1,8 +1,7 @@
-
+import {useState} from 'react';
 import { Boxes, Clinics } from './Boxes';
 import { BoxWrapper } from './BoxWrapper';
 import { Searchbar, SearchbarWrapper, SearchbarIcon } from './Searchbar';
-import React, {useState} from "react";
 
 interface Props {
   setNav: (nav: string) => void;

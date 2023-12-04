@@ -149,7 +149,7 @@ const Payment: React.FC<Props> = ({ setNav, clinic }) => {
                   <CardDetails />
                 </FlexContainerColumn>
               </FlexContainer>
-              <ButtonPrimary onClick={handleModalClose} setNav={setNav} clinic={clinic} style={{width:"100%", height:"5.4rem", marginTop:"2rem"}}>ADD PAYMENT</ButtonPrimary>
+              <ButtonPrimary onClick={handleModalClose} style={{width:"100%", height:"5.4rem", marginTop:"2rem"}}>ADD PAYMENT</ButtonPrimary>
              </FlexContainerColumn>
 
              </MyModule>

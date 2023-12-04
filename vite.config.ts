@@ -5,4 +5,9 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   base:"/hopverkefni-the-rejects/",
   plugins: [react()],
+  resolve: {
+    alias: {
+      '@mui/styled-engine': '@mui/styled-engine-sc',
+    },
+  },
 })

@@ -32,7 +32,10 @@ const Container = styled.div `
     align-items: Center;
     gap: 0rem;
 `
-const PhoneBar = styled.input `
+const PhoneBar = styled.input.attrs({
+    pattern: "\\d*",
+    inputMode: "numeric"   //adding this bc it hints to browsers to open numeric pad
+    }) `
     border-radius: 5px;
     background: #FFF;
     width: 283px;
@@ -42,14 +45,12 @@ const PhoneBar = styled.input `
     padding-top:10px;
     border: none;
     padding-left: 7px;
-    font-size: 2rem;
-    outline: none;
+    font-size: 2.6rem;
 
     &&::placeholder {
         font-size: 2rem;
     }
 `
-
 const AuthenticateButton = styled(ButtonPrimary)`
     margin-top: 3rem;
     margin-bottom: 10rem;
@@ -60,15 +61,18 @@ const AuthenticateButton = styled(ButtonPrimary)`
 
 interface Props {
         setNav: (nav: string) => void;  // this is added here for navigation
+        nav: string;
     }
     
 
-const PageTwoSignIn: React.FC<Props> = function ({setNav}){ 
+const PageTwoSignIn: React.FC<Props> = function ({setNav, nav}){ 
     return ( <Container> 
        <Title>Sign In</Title>
-       <div>
-        <PhoneBar placeholder='Name' type='Text'></PhoneBar>
-        </div>
+       {nav==="sign-in"? null: 
+        <div>
+            <PhoneBar placeholder='Name' type='Text'></PhoneBar>
+        </div>}
+
       <div>
         <PhoneBar placeholder='Phone Number' type='tel'></PhoneBar>
         <CheckBox text={"Remember me"}/>

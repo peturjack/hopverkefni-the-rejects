@@ -15,6 +15,7 @@ const StyledForm = styled.div`
     @media (max-width: 768px) {  //making sure it looks good on smaller screens
         align-items: center;
         width: 90%;
+    }
 `
 
 const FormDiv = styled.form`

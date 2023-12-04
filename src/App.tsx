@@ -13,7 +13,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import ChooseClinic from './components/chooseClinic/ChooseClinic';
 import TextWrapper from './components/TextWrapper';
-import IdPage from './components/signIn/Id';
+
 
  function App () {
 
@@ -41,8 +41,8 @@ import IdPage from './components/signIn/Id';
               clinic={clinic} />,
     "about": <About />,
     "contact": <Contact setNav={setNav}/>,
-    "sign-in": <IdPage setNav={setNav}/>,
-    "sign-in-two": <NoIdPage setNav = {setNav}/>,
+    "sign-in": <NoIdPage setNav={setNav} nav={nav}/>,
+    "sign-in-two": <NoIdPage setNav = {setNav} nav={nav}/>,
     "frontpage": <Frontpage setNav={setNav}/>,
     "payment": <Payment setNav={setNav} clinic={clinic} />
   }     

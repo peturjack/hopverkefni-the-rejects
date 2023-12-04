@@ -4,9 +4,6 @@ import styled from "styled-components";
 import MoreOptions from "./MoreOptions";
 import PageTwoSignIn from './PageTwoSignIn';
 
-
-
-
 const StyledNoIdPage = styled.div`
     display: flex;
     flex-direction: column;
@@ -18,14 +15,15 @@ const StyledNoIdPage = styled.div`
 
 interface Props {
     setNav: (nav: string) => void;  // this is added here for navigation
+    nav: string;
 }
 
-const NoIdPage: React.FC<Props> = ({setNav}) => {
+const NoIdPage: React.FC<Props> = ({setNav, nav}) => {
 
     return (
     <StyledNoIdPage>
-        <PageTwoSignIn setNav={setNav}/>
-        <MoreOptions setNav={setNav}/>
+        <PageTwoSignIn setNav={setNav} nav={nav}/>
+        <MoreOptions setNav={setNav} nav={nav}/>
     </StyledNoIdPage>
     );
 };

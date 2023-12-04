@@ -1,6 +1,22 @@
 import styled from 'styled-components';
 import CheckBox from "../CheckBox";
 import {ButtonPrimary} from "../Button";
+import { createTheme, ThemeProvider } from '@mui/material';
+
+import TextField from '@mui/material/TextField';
+import { purple } from '@mui/material/colors';
+
+const theme = createTheme({
+    typography: {
+        fontSize: 20
+    },
+    palette:{
+        primary:{
+            main: "#276989"
+        },
+        secondary: purple
+    }
+})
 
 const Title = styled.h2`
    font-size: 30px;

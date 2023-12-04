@@ -3,6 +3,8 @@ import CheckBox from "../CheckBox";
 import { ButtonPrimary } from "../Button";
 
 
+
+
 const Title = styled.h2`
    font-size: 30px;
    font-weight: 500;
@@ -50,7 +52,9 @@ const SignInPhone: React.FC<Props> = function ({setNav}){
     <Container> 
        <Title>Sign In</Title>
        <div>
-        <PhoneBar placeholder='000-000' type='tel'></PhoneBar>
+        
+
+       
         <CheckBox text={"Remember me"}/>
       </div>
       <br></br>

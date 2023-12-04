@@ -30,6 +30,7 @@ import IdPage from './components/signIn/Id';
     setOpen(false);  // this closes the menu when sth is clicked in menu
   };
   
+
   const pages: {[page:string]:JSX.Element} = {
     "clinic": <ChooseClinic setNav={setNav} setClinic={setClinic} />,    //'name of page' and component
     "ticket": <Ticket ticketNumber={ticketNumber} 

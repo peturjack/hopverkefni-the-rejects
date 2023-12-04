@@ -119,12 +119,12 @@ const Contact: React.FC<Props> = ({setNav}) => {
                 <Textarea name="message" placeholder="Write your message here..." required></Textarea>
                 <br/>
                 <ButtonPrimary type="submit" onClick={handleOpenModal} >Submit Form</ButtonPrimary>
-                {showModal && (<FormSubmit setNav={setNav}></FormSubmit>)}  //When submit is clicked, the message is sent to email and also opens the FormSubmit Modal
+                {showModal && (<FormSubmit setNav={setNav}></FormSubmit>)}  
         </FormDiv>
             <span>{result}</span>
         
     </StyledForm>
-  );
+  );   //When submit is clicked, the message is sent to email and also opens the FormSubmit Modal
 }
 
 export default Contact

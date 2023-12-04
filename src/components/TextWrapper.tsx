@@ -10,7 +10,6 @@ const StyledTextWrapper = styled.div`
     justify-content: center;
     gap: 2rem;
     align-items: center;
-    
     @media (max-width: 768px) {
     align-items: center;
     }

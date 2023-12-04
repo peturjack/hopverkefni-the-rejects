@@ -7,6 +7,7 @@ export const ChoosePaymentContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1.5rem;
 `
 
 export const LiveLocation = styled.div`
@@ -15,4 +16,5 @@ export const LiveLocation = styled.div`
     border-radius: 0.5rem;
     background-color: white;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-bottom: 4rem;
 `

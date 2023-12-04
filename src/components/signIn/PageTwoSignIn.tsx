@@ -1,6 +1,32 @@
 import styled from 'styled-components';
 import CheckBox from "../CheckBox";
 import {ButtonPrimary} from "../Button";
+import { createTheme, ThemeProvider } from '@mui/material';
+import TextField from '@mui/material/TextField';
+import { purple } from '@mui/material/colors';
+
+const theme = createTheme({
+    typography: {
+        fontSize: 20
+    },
+    palette:{
+        primary:{
+            main: "#276989"
+        },
+        secondary: purple
+    },
+    unstable_sxConfig: {
+        outlineColor:{
+            themeKey:"white"
+        },
+        outline: {
+            themeKey: "none"
+        },
+       border: {
+        themeKey: "none"
+       } 
+    }
+})
 
 const Title = styled.h2`
    font-size: 30px;
@@ -54,11 +80,16 @@ const PageTwoSignIn: React.FC<Props> = function ({setNav, nav}){
        <Title>Sign In</Title>
        {nav==="sign-in"? null: 
         <div>
-            <PhoneBar placeholder='Name' type='Text'></PhoneBar>
+            <ThemeProvider theme={theme}>
+            <TextField sx={{width:"30rem", background:"white", borderRadius:"0.5rem", marginTop:"2rem","& fieldset": { border: 'none', },}}  color='primary' id="outlined-basic" label="Name" variant="outlined" />
+            </ThemeProvider>
         </div>}
 
       <div>
-        <PhoneBar placeholder='Phone Number' type='tel'></PhoneBar>
+      <ThemeProvider theme={theme}>
+      <TextField sx={{width:"30rem", background:"white",borderRadius:"0.5rem", marginTop:"2rem","& fieldset": { border: 'none' },}} color='primary' id="outlined-basic" label="Phone number" variant="outlined" />
+            </ThemeProvider>
+        
         <CheckBox text={"Remember me"}/>
       </div>
       <AuthenticateButton onClick={() => setNav("clinic")} >Authenticate</AuthenticateButton>

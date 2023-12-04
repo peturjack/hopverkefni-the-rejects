@@ -6,6 +6,7 @@ export const StyledLogo = styled.div`
     max-width: 70px;
     max-height: 70px; //making sure the logo doesn't get too big on desktop
     padding: 0px;
+    z-index: 20;
 
     img {
         max-width: 100%;  //Added this to make sure the image doesn't exceed the div size

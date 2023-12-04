@@ -11,10 +11,9 @@ const CloudContainer = styled.div`
 `
 
 const Cloud = styled(motion.img)`
-    width: 120%;
+   width: 120%;
     margin-top: -15%;
     z-index: -20;
-
 `
 
 

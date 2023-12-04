@@ -4,6 +4,7 @@ import { FaSearch } from "react-icons/fa";
  const Searchbar = styled.input`
     width: 100%;
     padding: 1.5rem;
+
     border: none;
     border-radius: .5rem;
     outline: none;
@@ -15,6 +16,7 @@ import { FaSearch } from "react-icons/fa";
 
 const SearchbarWrapper = styled.div`
     width: 100%;
+    max-width: 52rem;
     display: flex;
     flex-direction: row;
     align-items: center;

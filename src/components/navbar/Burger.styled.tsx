@@ -5,8 +5,8 @@ interface Props {
 }
 
 export const StyledBurger = styled.button<Props>`
-  width: 1.5rem;
-  height: 1.5rem; 
+  width: 3rem;
+  height: 3rem; 
   display: none;
   border: none;
   cursor: pointer;
@@ -24,8 +24,8 @@ export const StyledBurger = styled.button<Props>`
   }
 
   div {
-    width: 1.5rem;
-    height: 0.25rem;
+    width: 3rem;
+    height: 0.32rem;
     background-color: ${({ open }) => open ? '#293437' : '#293437'};
     border-radius: 10px;
     transform-origin: 1px;

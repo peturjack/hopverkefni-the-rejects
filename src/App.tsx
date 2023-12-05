@@ -77,20 +77,7 @@ function App() {
         <TextWrapper>
           {pages[nav]} {/*Navigation function for site */}
         </TextWrapper>
-        <CloudContainer>
-        <Cloud 
-          alt="fluffy white clouds moving in the background"
-          initial={{ x: -100 }}
-          animate={{ x: 0 }}
-          transition={{
-            repeat: Infinity,
-            repeatType: "mirror",
-            duration: 20,
-            ease: [0.67, 0.67, 0.83, 0.67],
-          }}
-          src={cloud}
-        />
-      </CloudContainer>
+        
       </ContentWrapper>
       
     </>

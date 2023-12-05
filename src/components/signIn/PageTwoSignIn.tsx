@@ -7,7 +7,7 @@ import { purple } from '@mui/material/colors';
 
 const theme = createTheme({
     typography: {
-        fontSize: 20
+        fontSize: 30
     },
     palette:{
         primary:{
@@ -42,7 +42,7 @@ const Container = styled.div `
     align-items: Center;
     gap: 0rem;
 `
-const PhoneBar = styled.input.attrs({
+/*const PhoneBar = styled.input.attrs({
     pattern: "\\d*",
     inputMode: "numeric"   //adding this bc it hints to browsers to open numeric pad
     }) `
@@ -60,7 +60,7 @@ const PhoneBar = styled.input.attrs({
     &&::placeholder {
         font-size: 2rem;
     }
-`
+`*/
 const AuthenticateButton = styled(ButtonPrimary)`
     margin-top: 3rem;
     margin-bottom: 10rem;
@@ -81,13 +81,13 @@ const PageTwoSignIn: React.FC<Props> = function ({setNav, nav}){
        {nav==="sign-in"? null: 
         <div>
             <ThemeProvider theme={theme}>
-            <TextField sx={{width:"30rem", background:"white", borderRadius:"0.5rem", marginTop:"2rem","& fieldset": { border: 'none', },}}  color='primary' id="outlined-basic" label="Name" variant="outlined" />
+            <TextField sx={{width:"28.3rem", background:"white", borderRadius:"0.5rem",  marginTop:"2rem","& fieldset": { border: 'none', },}}  color='primary' id="outlined-basic" label="Name" variant="outlined" />
             </ThemeProvider>
         </div>}
 
       <div>
       <ThemeProvider theme={theme}>
-      <TextField sx={{width:"30rem", background:"white",borderRadius:"0.5rem", marginTop:"2rem","& fieldset": { border: 'none' },}} color='primary' id="outlined-basic" label="Phone number" variant="outlined" />
+      <TextField sx={{width:"28.3rem", background:"white",borderRadius:"0.5rem",  marginTop:"2rem","& fieldset": { border: 'none' },}} color='primary' id="outlined-basic" label="Phone number" variant="outlined" />
             </ThemeProvider>
         
         <CheckBox text={"Remember me"}/>

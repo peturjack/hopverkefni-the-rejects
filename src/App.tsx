@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Burger, Menu, Navbar, Logo } from "./components/navbar";
 import "./index.css";
-import { ContentWrapper, BackgroundColor } from "./components/ContentWrapper";
+import { ContentWrapper } from "./components/ContentWrapper";
 import Frontpage from "./components/frontpage";
 import cloud from "./assets/cloudmain.svg";
 import { CloudContainer, Cloud } from "./components/frontpage/cloud";
@@ -13,7 +13,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import ChooseClinic from "./components/chooseClinic/ChooseClinic";
 import TextWrapper from "./components/TextWrapper";
-import hospital from "./assets/WalkInClinic.png"
+
 
 function App() {
   const [open, setOpen] = React.useState(false);

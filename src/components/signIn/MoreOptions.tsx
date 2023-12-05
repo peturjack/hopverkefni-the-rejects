@@ -34,10 +34,10 @@ const MoreOptions: React.FC<Props> = function ({setNav, nav}){
     <Container> 
        <Title>More Options</Title>
        <div>
-       <AppLoginButton>App Login</AppLoginButton>
+       <AppLoginButton style={{boxShadow: "rgba(0, 0, 0, 0.09) 0px 3px 12px"}}>App Login</AppLoginButton>
       </div>
       <div>
-      <AppLoginButton onClick={toggleId}>{nav==="sign-in"?"No Electronic ID":"Electronic ID"}</AppLoginButton>
+      <AppLoginButton style={{boxShadow: "rgba(0, 0, 0, 0.09) 0px 3px 12px"}} onClick={toggleId}>{nav==="sign-in"?"No Electronic ID":"Electronic ID"}</AppLoginButton>
       </div>
     </Container>
     )

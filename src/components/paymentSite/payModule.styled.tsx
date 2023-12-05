@@ -6,7 +6,7 @@ export const MyModule = styled.div`
     right: 0;
     height: 65%;
     background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(182,230,233,1) 100%);
+    background-image: linear-gradient(to top, #ffffff, #f3f7fe, #e1f0fc, #cbebf6, #D8EEFA); 
     position: absolute;
     bottom: 0;
     border-radius:1rem ;

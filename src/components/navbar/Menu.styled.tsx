@@ -32,7 +32,8 @@ export const StyledMenu = styled.nav<Props>`
 // This is the menu in smaller screens
   @media (max-width: 768px) {
     flex-flow: column wrap;
-    background-color: rgb(182,230,233);
+    background-color: #C8EAF4;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
     padding: 1.5rem 0;
     z-index: 10; 
     position: fixed;

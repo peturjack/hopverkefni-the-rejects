@@ -20,7 +20,7 @@ const Container = styled.div `
     gap: 2rem;
    
 `
-const PhoneBar = styled.input.attrs({
+/*const PhoneBar = styled.input.attrs({
     pattern: "\\d*",
     inputMode: "numeric"   //adding this bc it hints to browsers to open numeric pad
     }) `
@@ -40,7 +40,7 @@ const PhoneBar = styled.input.attrs({
             padding-left: 7px;
             font-size: 2.6rem;
         }
-    `
+    `*/
 
 interface Props {
     setNav: (nav: string) => void;  // this is added here for navigation

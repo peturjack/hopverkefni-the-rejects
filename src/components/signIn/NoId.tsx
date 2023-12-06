@@ -2,9 +2,9 @@
 import React from 'react';
 import styled from "styled-components";
 import MoreOptions from "./MoreOptions";
-import PageTwoSignIn from './PageTwoSignIn';
+import SignIn from './SignIn';
 
-const StyledNoIdPage = styled.div`
+const StyledIdPage = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -18,14 +18,14 @@ interface Props {
     nav: string;
 }
 
-const NoIdPage: React.FC<Props> = ({setNav, nav}) => {
+const IdPage: React.FC<Props> = ({setNav, nav}) => {
 
     return (
-    <StyledNoIdPage>
-        <PageTwoSignIn setNav={setNav} nav={nav}/>
+    <StyledIdPage>
+        <SignIn setNav={setNav} nav={nav}/>
         <MoreOptions setNav={setNav} nav={nav}/>
-    </StyledNoIdPage>
+    </StyledIdPage>
     );
 };
 
-export default NoIdPage
+export default IdPage

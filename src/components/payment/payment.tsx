@@ -68,12 +68,12 @@ const Payment: React.FC<Props> = ({ setNav, clinic }) => {
             </span>
             
           </FlexContainer>
-          <span style={{fontSize:"5rem"}} >196</span>
+          <span style={{fontSize:"5rem", color: "#293437"}} >196</span>
           <p style={{paddingBottom:"1.5rem"}}>Estimated wait time is 42 minutes</p>
           </FlexContainerColumn>
         </LiveLocation>
         <ChoosePaymentContainer>
-          <h3 style={{ fontWeight: "600rem", fontSize: "2rem" }}>
+          <h3 style={{ fontWeight: "500rem", fontSize: "2rem", color: "#293437" }}>
             CHOOSE PAYMENT METHOD
           </h3>
           <p style={{ padding: "1.2rem" }}>
@@ -124,7 +124,7 @@ const Payment: React.FC<Props> = ({ setNav, clinic }) => {
       </FlexContainerColumn  >
       {modalOpen &&(
               <MyModule>
-              <h1 style={{textAlign:"center", padding:"2rem 0", letterSpacing:"0.42rem"}}>PAYMENT METHODS</h1>
+              <h1 style={{textAlign:"center", padding:"2rem 0", letterSpacing:"0.42rem", color: "#293437", paddingTop: "4rem"}}>PAYMENT METHODS</h1>
               <FlexContainer style={{padding:"1.5rem 15%", justifyContent:"space-evenly"}}>
                 <img style={{ height: "2.5rem" }} src={masterCard} alt="mastercard payment option" />
                 <img style={{ width: "5rem" }} src={visa} alt="visa payment option" />

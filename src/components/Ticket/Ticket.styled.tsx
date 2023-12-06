@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledTicket = styled.div`
-    display: inline-block;
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
@@ -12,19 +12,20 @@ export const StyledTicket = styled.div`
     background-color: #ffffff;
     margin: 1rem;
     text-align: center;
-    box-shadow: 0px 4px 8px rgba(182,230,233, 0.6); //drop shadow
+    box-shadow: 0px 4px 8px rgba(39, 104, 137, 0.2); //drop shadow for ticket
 
     @media (max-width: 768px) {
-    display: inline-block;
+    display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;
     margin: 0rem;
     width: 200px;
+
     }
 
     //Style for Your ticket number div
     div:nth-child(1) {
-      display: inline-block;
+      display: flex;
       flex-direction: column;
       margin-bottom: 1rem;
       margin-top: 1rem;

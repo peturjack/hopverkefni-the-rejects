@@ -6,7 +6,7 @@ import Frontpage from "./components/frontpage";
 import cloud from "./assets/cloudmain.svg";
 import { CloudContainer, Cloud } from "./components/frontpage/cloud";
 import Payment from "./components/payment/payment";
-import IdPage from "./components/signIn/NoId";
+import IdPage from "./components/signIn/Id";
 import Ticket from "./components/ticket/Ticket";
 import useTicket from "./components/ticket/useTicket";
 import About from "./components/About";

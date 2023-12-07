@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { motion } from "framer-motion"
 
+//Styling and animation for clouds in background
+
 const CloudContainer = styled.div`
     top: 0;
     overflow: hidden;

@@ -19,4 +19,3 @@ const Logo: React.FC<Props> = ({setNav}) => {
 
 export default Logo;
 
-// Need to fix the onClick for the logo 

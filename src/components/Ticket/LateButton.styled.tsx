@@ -34,7 +34,8 @@ export const Modal = styled(motion.div)`
   border-radius: 1rem;
   display: flex;
   justify-content: center;
-  box-shadow: 0px 2px 8px rgba(39, 105, 137, 0.9);
+  align-items: center;
+  box-shadow: 0px 2px 8px rgba(39, 105, 137, 0.3);
   transform: translate(-50%, -50%);    
 
   @media (max-width: 768px) {
@@ -47,7 +48,6 @@ export const ModalContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   padding: 2rem;
   margin-bottom: 4rem;
   text-align: left;

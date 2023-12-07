@@ -33,10 +33,10 @@ const LateButton: React.FC<Props> = ({ requestNewTicket, setNav }) => {
       <QuestionButton onClick={handleOpenModal}>Are you running late?</QuestionButton>
       {showModal && (
         <Modal key="coolModal" variants={popUpAnimation} initial="hidden" animate="visible" exit="exit">
-          <IoMdClose onClick={handleOnlyCloseModal} style={{position:"relative", top:"3%", left:"80%", cursor:"pointer", fontSize:"2.7rem"}}>X</IoMdClose>
           <ModalContent>
-            
-            <Paragraph><span style={{display: 'flex', justifyContent: 'center', fontWeight: 600, letterSpacing: 1,}}>LIFE HAPPENS!</span><br/><br/>If you run into trouble getting to your appointment and are running late, you can click here and request a new ticket number. 
+          <IoMdClose onClick={handleOnlyCloseModal} style={{position:"absolute", top:"2%", left:"90%", cursor:"pointer", fontSize:"2.7rem"}}>X</IoMdClose>
+
+            <Paragraph><span style={{fontSize:"2rem" ,display: 'flex', justifyContent: 'center', fontWeight: 600, letterSpacing: 1,}}>LIFE HAPPENS!</span><br/><br/>If you run into trouble getting to your appointment and are running late, you can click here and request a new ticket number. 
               <br/><br/>If the clinic is about to close you will get the option to get a new ticket tomorrow. Please contact your clinic if that doesn't work for you. 
             </Paragraph>
             <Button onClick={() => {requestNewTicket(); handleCloseModal();}}>NEW TICKET</Button>

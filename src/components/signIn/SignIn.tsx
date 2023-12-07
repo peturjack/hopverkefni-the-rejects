@@ -5,6 +5,8 @@ import { createTheme, ThemeProvider } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import { purple } from '@mui/material/colors';
 
+
+//Creating a theme for the MUI
 const theme = createTheme({
     typography: {
         fontSize: 30
@@ -61,7 +63,7 @@ interface Props {
 const SignIn: React.FC<Props> = function ({setNav, nav}){ 
     return ( <Container> 
        <Title>Sign In</Title>
-       {nav==="sign-in"? null: 
+       {nav==="sign-in"? null:  //  This renders a Title and a TextField for the name only if nav is not equal to “sign-in”.
         <div>
           <ThemeProvider theme={theme}>
             <TextField

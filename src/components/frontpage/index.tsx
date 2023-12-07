@@ -1,8 +1,10 @@
 import { ButtonPrimary } from "../Button";
+
 interface Props {
-  setNav: (nav: string) => void;
+  setNav: (nav: string) => void;   // A function to set the navigation item
 }
 
+//Our frontpage component that accepts setNav as props
 const Frontpage: React.FC<Props> = ({setNav}) => {
   return (
     <>

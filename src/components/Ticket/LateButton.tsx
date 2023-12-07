@@ -20,7 +20,7 @@ const LateButton: React.FC<Props> = ({ requestNewTicket, setNav }) => {
   const handleCloseModal = () => {
     setShowModal(false);  
     setNav('ticket');  // This is for navigation when requestNewTicket is clicked
-    console.log('close Modal');
+    console.log('close Modal');  //testing to see if it works
   };
 
   const handleOnlyCloseModal = () => {

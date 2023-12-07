@@ -22,6 +22,7 @@ interface Props {
 
 const MoreOptions: React.FC<Props> = function ({setNav, nav}){ 
 
+    // Function that toggles between our two sign-in pages.   Still need to add the third toggle function for the App Login page (plus create and connect) for the first app login button
     const toggleId = () => {
         if (nav === "sign-in") {
             setNav("sign-in-two");
@@ -31,6 +32,7 @@ const MoreOptions: React.FC<Props> = function ({setNav, nav}){
     } 
 
     return ( 
+        // AppLoginButton has an onClick handler that toggles the nav prop between “sign-in” and “sign-in-two”. The text of this button changes based on the current nav prop.
     <Container> 
        <Title>More Options</Title>
        <div>
@@ -44,3 +46,15 @@ const MoreOptions: React.FC<Props> = function ({setNav, nav}){
 }
 
 export default MoreOptions
+
+
+/* about the onclick on apploginbutton:  
+The standard onClick is an event handler that triggers the toggleId function when the button is clicked. 
+The toggleId function is defined in my component and it toggles the nav state between “sign-in” and “sign-in-two”.
+
+The nav=== etc is a ternary operator, which is a shorthand way of writing an if-else statement. 
+It checks if nav is equal to “sign-in”. If it is, it will display “No Electronic ID”. 
+If nav is not equal to “sign-in”, it will display “Electronic ID”.
+
+
+*/

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, ModalContent, Paragraph, QuestionButton, Button } from './LateButton.styled';
+import { Modal, ModalContent, Paragraph, QuestionButton, Button } from "./LateButton.styled";
 
 interface Props {
   requestNewTicket: () => void;  // defining the props for the requestNewTicket button

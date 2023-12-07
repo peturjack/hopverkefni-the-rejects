@@ -66,6 +66,7 @@ export const QuestionButton = styled.button`
   padding: 0.5rem;
   transition: .2s ease-in-out;
   color: #293437;
+  
   &&:hover {
     transform: scale(1.1);
   }

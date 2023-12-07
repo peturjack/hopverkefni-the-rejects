@@ -75,26 +75,56 @@ interface Props {
     }
     
 
-const PageTwoSignIn: React.FC<Props> = function ({setNav, nav}){ 
-    return ( <Container> 
-       <Title>Sign In</Title>
-       {nav==="sign-in"? null: 
+const PageTwoSignIn: React.FC<Props> = function ({ setNav, nav }) {
+  return (
+    <Container>
+      <Title>Sign In</Title>
+      {nav === "sign-in" ? null : (
         <div>
-            <ThemeProvider theme={theme}>
-            <TextField sx={{width:"28.3rem", background:"white", borderRadius:"0.5rem",  marginTop:"2rem","& fieldset": { border: 'none', },}}  color='primary' id="outlined-basic" label="Name" variant="outlined" />
-            </ThemeProvider>
-        </div>}
+          <ThemeProvider theme={theme}>
+            <TextField
+              sx={{
+                width: "28.3rem",
+                background: "white",
+                borderRadius: "0.5rem",
+                marginTop: "2rem",
+                boxShadow: "rgba(0, 0, 0, 0.09) 0px 3px 12px",
+                "& fieldset": { border: "none" },
+              }}
+              color="primary"
+              id="outlined-basic"
+              label="Name"
+              variant="outlined"
+            />
+          </ThemeProvider>
+        </div>
+      )}
 
       <div>
-      <ThemeProvider theme={theme}>
-      <TextField sx={{width:"28.3rem", background:"white",borderRadius:"0.5rem",  marginTop:"2rem","& fieldset": { border: 'none' },}} color='primary' id="outlined-basic" label="Phone number" variant="outlined" />
-            </ThemeProvider>
-        
-        <CheckBox text={"Remember me"}/>
+        <ThemeProvider theme={theme}>
+          <TextField
+            sx={{
+              width: "28.3rem",
+              background: "white",
+              borderRadius: "0.5rem",
+              marginTop: "2rem",
+              boxShadow: "rgba(0, 0, 0, 0.09) 0px 3px 12px",
+              "& fieldset": { border: "none" },
+            }}
+            color="primary"
+            id="outlined-basic"
+            label="Phone number"
+            variant="outlined"
+          />
+        </ThemeProvider>
+
+        <CheckBox text={"Remember me"} />
       </div>
-      <AuthenticateButton onClick={() => setNav("clinic")} >Authenticate</AuthenticateButton>
-      </Container>
-      )
-}
+      <AuthenticateButton onClick={() => setNav("clinic")}>
+        Authenticate
+      </AuthenticateButton>
+    </Container>
+  );
+};
 
 export default PageTwoSignIn

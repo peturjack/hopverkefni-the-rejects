@@ -12,7 +12,28 @@ import {
   import { CardDetails } from "./cardDetails";
 import { PropsWithChildren } from "react";
 
-
+export const dropIn = {
+    hidden: { 
+        opacity: 1 ,
+        y: "100vh"
+    },
+    visible: { 
+        opacity: 1,
+        y: "0vh",
+        transition: {
+          duration:0.5
+        }
+      
+     },
+     exit: {
+        opacity: 0 ,
+        y: "100vh",
+        transition: {
+          duration:0.5
+        }
+   
+     }
+  }
 
 
 

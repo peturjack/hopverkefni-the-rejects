@@ -12,7 +12,7 @@ import applePay from "../../assets/apple-pay.svg";
 import googlePlay from "../../assets/google-pay.svg";
 import { BackgroundClose,ChoosePaymentContainer, LiveLocation, PaymentImage, LiveLocationText, LiveLocationBall } from "./choosePaymentMethod";
 import { Animate } from "./payModule.styled";
-
+import { dropIn } from "./popupModal";
 import PopupModal from "./popupModal";
 import React from "react";
 import { AnimatePresence } from "framer-motion";
@@ -26,28 +26,7 @@ interface Props {
   setNav: (nav: string) => void;  
 }
 
-export const dropIn = {
-  hidden: { 
-      opacity: 1 ,
-      y: "100vh"
-  },
-  visible: { 
-      opacity: 1,
-      y: "0vh",
-      transition: {
-        duration:0.5
-      }
-    
-   },
-   exit: {
-      opacity: 0 ,
-      y: "100vh",
-      transition: {
-        duration:0.5
-      }
- 
-   }
-}
+
 
 const Payment: React.FC<Props> = ({ setNav, clinic }) => {
   

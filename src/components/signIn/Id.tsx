@@ -15,12 +15,14 @@ const StyledIdPage = styled.div`
 
 interface Props {
     setNav: (nav: string) => void;  // this is added here for navigation
-    nav: string;
+    nav: string;   // The current navigation item
 }
 
 const IdPage: React.FC<Props> = ({setNav, nav}) => {
 
     return (
+        // renders the styled Id page component
+        // and then the SignIn and MoreOptions components with setNav and nav props
     <StyledIdPage>
         <SignIn setNav={setNav} nav={nav}/>
         <MoreOptions setNav={setNav} nav={nav}/>

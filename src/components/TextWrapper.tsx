@@ -19,13 +19,15 @@ const StyledTextWrapper = styled.div`
     }
 
 `
-
+// Defines the properties that the TextWrapper component will accept
 interface Props {
-    children: React.ReactNode;  // Adding children as props so the TextWrapper can be used anywhere
+    children: React.ReactNode;  // Adding children as props so the TextWrapper can be used anywhere with any divs inside
 }
-
+// Functional Component TextWrapper that accepts props of type Props
 const TextWrapper: React.FC<Props> = ({ children }) => {
     return (
+        // Renders the children inside the StyledTextWrapper component
+        // children prop allows you to pass any React elements as children to the component.
         <StyledTextWrapper>
             {children}
         </StyledTextWrapper>

@@ -82,7 +82,7 @@ const Contact: React.FC<Props> = ({setNav}) => {
             setResult("Sending....");
     const formData = new FormData(event.currentTarget);
 
-    formData.append("access_key", "494213e6-4e78-462d-adbe-21a9573eba30");  //this is our access to this API and allows for it to send message to the site email
+    formData.append("access_key", import.meta.env.VITE_FORM_KEY as string);  //this is our access to this API and allows for it to send message to the site email
     
     //Sending form data to the server
     const res = await fetch( "https://api.web3forms.com/submit", {

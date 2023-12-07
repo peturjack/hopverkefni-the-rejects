@@ -26,14 +26,18 @@ button {
 
 p{
   font-size: 1.6rem;
+  color: #293437;
 }
 
 h1 {
   font-size: 2.4rem;
   font-weight: 500;
+  color: #293437;
+  letter-spacing: 1px;
   
 }
 
 h2 {
   font-size: 2rem;
+  color: #293437;
 }

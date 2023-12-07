@@ -26,7 +26,7 @@ export const StyledBurger = styled.button<Props>`
   div {
     width: 3rem;
     height: 0.32rem;
-    background-color: ${({ open }) => open ? '#293437' : '#293437'};
+    background-color: ${({ open }) => open ? '#276989' : '#276989'};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;

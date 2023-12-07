@@ -35,7 +35,7 @@ export const Modal = styled(motion.div)`
   display: flex;
   justify-content: center;
   box-shadow: 0px 2px 8px rgba(39, 105, 137, 0.9);
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);    
 
   @media (max-width: 768px) {
     width: 80%;
@@ -54,18 +54,6 @@ export const ModalContent = styled.div`
   width: 75%;
 `;
 
-// export const CloseModal = styled.div`  // I want this to be part of when requesting new ticket, there should be no need for this
-//   height: 2rem;
-//   width: 100%;
-//   top: 10px;
-//   right: 10px;
-//   cursor: pointer;
-//   padding: 6rem;
-//   font-size: 1.6rem;
-//   text-align: center;
-
-// `;
-
 export const Paragraph = styled.p`
   margin-bottom: 3rem;
   padding: 1rem;
@@ -77,8 +65,9 @@ export const QuestionButton = styled.button`
   background-color: transparent;
   padding: 0.5rem;
   transition: .2s ease-in-out;
+  color: #293437;
   &&:hover {
-    background-color: rgba(182,230,233, 0.4);
+    transform: scale(1.1);
   }
 `
 

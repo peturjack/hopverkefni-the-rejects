@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { AppLoginButton } from '../Button';
 
 const Title = styled.p`
-    color: #000;
+    color: #293437;
     font-size: 16px;
     font-style: normal;
 `

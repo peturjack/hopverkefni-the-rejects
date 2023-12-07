@@ -74,7 +74,7 @@ const Payment: React.FC<Props> = ({ setNav, clinic }) => {
         </LiveLocation>
 
         <ChoosePaymentContainer>
-          <h3 style={{ fontWeight: "600rem", fontSize: "2rem" }}>
+          <h3 style={{ fontWeight: "500rem", fontSize: "2rem", color: "#293437" }}>
             CHOOSE PAYMENT METHOD
           </h3>
           <p style={{ padding: "1.2rem" }}>

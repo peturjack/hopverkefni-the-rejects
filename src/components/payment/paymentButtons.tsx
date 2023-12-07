@@ -31,8 +31,9 @@ const PaymentButtons = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
+    color: "#293437";
     transition: .3s ease-in-out;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(39, 104, 137, 0.2) 0px 2px 8px 0px;
     &&:hover {
         scale: 1.1;
     }

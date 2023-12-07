@@ -22,13 +22,13 @@ import styled from "styled-components";
 `
 
 const AppLoginButton = styled(ButtonPrimary)`
-    color: black;
+    color: #293437;
     background-color:white;
     font-size:1.6rem;
     height: 45px;
     width: 200px;
-    &&&:hover {
-        background-color: rgb(182,230,233);
+    &&:hover {
+        background-color: white;
     }
 `
 

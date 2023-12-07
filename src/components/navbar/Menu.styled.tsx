@@ -38,7 +38,7 @@ export const StyledMenu = styled.nav<Props>`
     z-index: 10; 
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(120%)'};
-    top: 3%;   // Position of menu 
+    top: 3%;   // Position of dropdown menu 
     right: 7%;
     height: 16rem;
     list-style: none;

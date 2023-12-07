@@ -20,6 +20,7 @@ const Frontpage: React.FC<Props> = ({setNav}) => {
               paddingBottom: ".5rem", 
               fontWeight: "500",
               fontSize: "4.4rem ",
+              color: '#293437',
             }}>
             THE <br />WAITING <br /> ROOM
           </h1>

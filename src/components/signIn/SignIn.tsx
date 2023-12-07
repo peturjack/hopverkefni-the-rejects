@@ -34,6 +34,7 @@ const Title = styled.h2`
    line-height: normal;
    letter-spacing: 1.2px;
    margin-top: -7rem;
+   color: #293437;
 `
 const Container = styled.div `
     display: Flex;
@@ -42,25 +43,7 @@ const Container = styled.div `
     align-items: Center;
     gap: 0rem;
 `
-/*const PhoneBar = styled.input.attrs({
-    pattern: "\\d*",
-    inputMode: "numeric"   //adding this bc it hints to browsers to open numeric pad
-    }) `
-    border-radius: 5px;
-    background: #FFF;
-    width: 283px;
-    height: 55px;
-    flex-shrink: 0;
-    margin-top:10px;
-    padding-top:10px;
-    border: none;
-    padding-left: 7px;
-    font-size: 2.6rem;
 
-    &&::placeholder {
-        font-size: 2rem;
-    }
-`*/
 const AuthenticateButton = styled(ButtonPrimary)`
     margin-top: 3rem;
     margin-bottom: 10rem;
@@ -75,7 +58,7 @@ interface Props {
     }
     
 
-const PageTwoSignIn: React.FC<Props> = function ({setNav, nav}){ 
+const SignIn: React.FC<Props> = function ({setNav, nav}){ 
     return ( <Container> 
        <Title>Sign In</Title>
        {nav==="sign-in"? null: 
@@ -97,4 +80,4 @@ const PageTwoSignIn: React.FC<Props> = function ({setNav, nav}){
       )
 }
 
-export default PageTwoSignIn
+export default SignIn

@@ -1,5 +1,6 @@
-import { StyledTicket } from './Ticket.styled'
+import { StyledTicket } from './Ticket.styled';
 import LateButton from './LateButton';
+
 
 interface Props {
     ticketNumber: number;    // Defining my props 
@@ -15,8 +16,8 @@ const Ticket: React.FC<Props> = ({ticketNumber, lastNumber, waitTime, requestNew
     return (
         <>
             <div><h1>{clinic}</h1></div> {/*This needs to be fetching the right choice from ChooseClinic Page*/}
-            <div><p>You are now in line for a walk-in appointment.<br /><br />
-            <strong>You will receive an SMS reminder 30 minutes before your appointment.<br />And another reminder 15 minutes before.</strong><br /><br />  
+            <div><p>You are now in line for a walk-in appointment at your clinic.<br /><br />
+            <strong>You will receive a text message reminder 30 minutes before your appointment.<br />And another reminder 15 minutes before.</strong><br /><br />  
             Make sure to be on time!</p></div>
             <StyledTicket>
                 <div>

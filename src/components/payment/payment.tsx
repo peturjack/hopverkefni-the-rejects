@@ -20,33 +20,42 @@ import { AnimatePresence } from "framer-motion";
 
 
 
-
+// Define the properties for the Payment component
 interface Props {
   clinic: string
   setNav: (nav: string) => void;  
 }
 
 
-
+// Define the Payment component
 const Payment: React.FC<Props> = ({ setNav, clinic }) => {
   
+   // State for managing the modal's open/close status
   const [modalOpen, setModalOpen] = useState(false)
+
+  // Function to open the modal
   const handleModalOpen = () => {
     setModalOpen(true)
   }
+
+  // Function to close the modal and navigate to "ticket"
   const handleModalClose = () => {
     setModalOpen(false)
     setNav("ticket")
     
   }
 
+    // Function to only close the modal
   const handleModalOnlyClose = () => {
     setModalOpen(false)
    
   }
 
+  // Render the Payment component
   return (
     <>
+      {/* AnimatePresence is a component from Framer Motion that enables exit animations. 
+    It allows components to animate out when they're removed from the React tree. */}
     <AnimatePresence >
       <FlexContainerColumn
         style={{
@@ -89,7 +98,9 @@ const Payment: React.FC<Props> = ({ setNav, clinic }) => {
 
         <PaymentButtonContainer>
           <FlexContainer>
-            <PaymentButtons onClick={handleModalOpen}>
+              {/* The PaymentButtons component triggers the handleModalOpen function upon a click event, 
+              which controls the opening of the modal. */}            
+          <PaymentButtons onClick={handleModalOpen}>
               <PaymentImage src={masterCard} alt="mastercard payment option" />
             </PaymentButtons>
             <PaymentButtons onClick={handleModalOpen}>
@@ -106,11 +117,18 @@ const Payment: React.FC<Props> = ({ setNav, clinic }) => {
           </FlexContainer>
         </PaymentButtonContainer>
       </FlexContainerColumn>
+      {/* If modalOpen is true, render the PopupModal with an exit animation */}
       {modalOpen && (
         
    
-        
-          <Animate key="modal" variants={dropIn} initial="hidden" animate="visible" exit="exit">
+       //* Animate is a component from Framer Motion that allows you to animate the children components.
+    //"key" prop helps React identify which items have changed, are added, or are removed, and is useful in animations when you're animating one item in or out.
+   // "variants" prop is used to define animation states.
+    //"dropIn" is an object that defines the animation states (hidden, visible, exit).
+    //"initial" prop defines the initial state of the animation. Here it's set to "hidden".
+    //"animate" prop defines the state to animate to. Here it's set to "visible".
+   // "exit" prop defines the state when the component is exiting the React tree. Here it's set to "exit".
+         <Animate key="modal" variants={dropIn} initial="hidden" animate="visible" exit="exit">
    
             <PopupModal>
               <ButtonPrimary

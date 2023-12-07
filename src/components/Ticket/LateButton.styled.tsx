@@ -1,8 +1,31 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-// Styling for Modal
+export const popUpAnimation = {
+  hidden:{
+    opacity: 1,
+    y: "100vh",
+    x: "-50%",
+  },
+  visible:{
+    opacity: 1,
+    y: -250,
+    x: "-50%",
+    transition:{
+      duration: 0.5
+    }
+  },
+  exit:{
+    opacity: 1,
+    y: "100vh",
+    x: "-50%",
+    transition:{
+      duration: 0.5
+    }
+  }
+}
 
-export const Modal = styled.div`
+export const Modal = styled(motion.div)`
   position: fixed;
   top: 50%;
   left: 50%;
@@ -24,6 +47,7 @@ export const ModalContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   padding: 2rem;
   margin-bottom: 4rem;
   text-align: left;
